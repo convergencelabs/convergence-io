@@ -1,0 +1,121 @@
+---
+---
+
+@import "home";
+@import "footer";
+@import "elements";
+@import "classes";
+@import "colors";
+@import "page";
+@import "header";
+@import "pricing";
+
+/* ==========================================================================
+Media Queries
+ ========================================================================== */
+/* ------ Tablet Portrait size to standard 960 (devices and browsers) ------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  img {
+    margin: 20px auto;
+  }
+  .img-thumbnail {
+    margin: 0;
+  }
+}
+
+/* ------ Mobile Landscape Size to Tablet Portrait (devices and browsers) ------*/
+@media only screen and (max-width: 767px) {
+  .navbar-inverse {
+    background-color: #FFF;
+    padding: 0;
+  }
+  .navbar > .container .navbar-brand {
+    margin-left: 15px;
+    color: #1a1a1a;
+    margin-top: 15px;
+  }
+  .menu-right {
+    float: none;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+    color: #1a1a1a;
+  }
+  .navbar-inverse .navbar-nav > .active > a,
+  .navbar-inverse .navbar-nav > .active > a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus,
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: #00A8D6;
+  }
+  img {
+    display: block;
+    margin: 20px auto;
+  }
+  .section {
+    padding: 70px 0;
+  }
+  .main-point {
+    margin-bottom: 40px;
+  }
+  .video-container {
+    margin-bottom: 40px;
+  }
+  .img-thumbnail {
+    margin: 0;
+  }
+}
+
+/* ------ Mobile Portrait Size to Mobile Landscape Size (devices and browsers) ------*/
+@media only screen and (max-width: 479px) {
+  h2 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  img {
+    float: none;
+    display: block;
+    margin: 20px auto;
+  }
+  iframe {
+    max-height: 200px;
+  }
+  .banner-content h1 {
+    font-size: 34px;
+  }
+  .headline h1 {
+    font-size: 30px;
+  }
+  .headline h2 {
+    font-size: 28px;
+  }
+  .section {
+    padding: 50px 0;
+  }
+  .separator60 {
+    margin: 30px 0;
+  }
+  .steps-list {
+    margin-bottom: 30px;
+  }
+  .main-point h3 {
+    font-size: 20px;
+  }
+  .video-container {
+    margin-bottom: 40px;
+  }
+  .img-thumbnail {
+    margin: 0;
+  }
+  .testimonial-inner img {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .contact-list, .quick-links {
+    margin-bottom: 30px;
+  }
+  .copyright {
+    float: none;
+  }
+}

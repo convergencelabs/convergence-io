@@ -1,0 +1,171 @@
+row1:
+  - title: Real Time Data
+    icon: /assets/img/features/realtime-data.png
+    tagline: Bring your data to life through shared data structures that keep all clients in sync in real time.
+    descriptionTitle: Your Data Comes Alive in Realtime
+    description: Realtime data is at the heart of any collaborative app. Like other services, Convergence stores your data in the cloud and allows access to it from anywhere and any device. But it is the only platform designed from the ground up for highly interactive applications and real-time, shared, simultaneously modifiable data. As one client changes the data, all other clients are kept in sync and our concurrency control algorithms ensure data integrity is maintained. In the example to the right, we open a data model and get the “firstName” property&#58; this is a RealTimeString object. From that we set some listeners on the firstName in order to see edits in real time. Then we do a series of mutations to the string.
+    code: |-
+           https&#58;//api.convergence.io/realtime/domain/<username>/<domain-id>/";
+           Convergence.connectAnonymously().then(domain => {
+             const modelService = domain.models();
+             modelService.openModel("people", "fred").then(model => {
+               // the model is {firstName: “Fred”, lastName: “Flanders”}
+               // A real time string
+               const firstName = model.elementAt("firstName");
+               firstName.on("set", evt => {
+                 console.log(firstName.value());
+               });
+
+               firstName.on("insert", evt => {
+                 console.log(firstName.value());
+               });
+
+               firstName.on("remove", evt => {
+                 console.log(firstName.value());
+               });
+
+               // Listen to course grained events
+               firstName.on("model_changed", evt => {
+                 console.log("change");
+               });
+
+               // Set the string
+               firstName.set("Ted"); // "Ted", "change"
+
+               // Delete the "T" at index 1
+               firstName.remove(0, 1); // "ed", "change"
+
+               // Insert an "N" at index 0.
+               firstName.insert("N", 0); // "Ned", "change"
+             });
+           });
+
+  - title: Collaboration Awareness
+    icon: /assets/img/features/collaboration-awareness.png
+    tagline: Help users work together efficiently through awareness of what each person is doing.
+    descriptionTitle: Provide the Visual Cues Users Need to Collaborate
+    description: For users to effectively collaborate together, each user needs to know what every other user is doing. Shared cursors, selections, and pointers help users anticipate what others are about to do, helping them coordinate and avoid conflicts. These references are relative to the shared data and need to be aware of changes in state. Convergence greatly simplifies this and does the heavy lifting for you, making it easy to provide collaborative cues.
+    code: |-
+           domain.models().open(“collection”, model).then( model => {
+             const rtString = model.elementAt(“myString”);
+
+             // Create and publish a local cursor.
+             const localCursor = rtString.indexReference("cursor");
+             localCursor.set(3);
+             localCursor.publish(); // Listen for remote references.
+
+             rtString.on("reference", refEvent => {
+               const reference = refEvent.reference;
+               reference.on("set", e => {
+                 console.log(“remote cursor set”, e.value);
+               });
+
+               reference.on("cleared", e => {
+                 console.log(“remote cursor cleared”);
+               });
+
+               reference.on("disposed", e => {
+                 console.log(“no more cursor”);
+               });
+             });
+           });
+  - title: Chat & Messaging
+    icon: /assets/img/features/chat-and-messaging.png
+    tagline: Help users work together efficiently through awareness of what each person is doing.
+    descriptionTitle: Fully-Functional Chat in Minutes
+    description: Users of any social or collaborative software expect basic messaging or chat capabilities. Just look at Facebook, Google Docs, or even Stack Overflow. We recognize this and built in tools to make messaging brain-dead easy. Chat is a simple concept -- don't waste your time re-inventing the wheel.
+    code: |-
+          // Join a chat room by Id.
+          const room = domain.chat().joinRoom('my-chat-room').then(room => {
+            // Receive Messages
+            room.on("message", event => {
+              console.log(new Date(event.timestamp) +
+                " " + event.username +
+                ": " + event.message);
+            });
+
+            // Send Messages
+            room.send("Hello Chat Room");
+
+            // Leave the room
+            room.leave();
+          });
+
+row2:
+  - title: Presence
+    icon: /assets/img/features/presence.png
+    tagline: Easily track who is online and available to work with. Building and tracking buddy lists is simple.
+    descriptionTitle: See Whose Online and Ready To Collaborate
+    description: Effective communication requires knowing who is online, available, and working on what data. We provide a convenient presence API so you can design an application where your users aren't stepping on one another's toes.
+    code: |-
+           https&#58;//api.convergence.io/realtime/domain/<username>/<domain-id>/";
+           Convergence.connectAnonymously().then(domain => {
+             const modelService = domain.models();
+             modelService.openModel("people", "fred").then(model => {
+               // the model is {firstName: “Fred”, lastName: “Flanders”}
+               // A real time string
+               const firstName = model.elementAt("firstName");
+               firstName.on("set", evt => {
+                 console.log(firstName.value());
+               });
+
+               firstName.on("insert", evt => {
+                 console.log(firstName.value());
+               });
+
+               firstName.on("remove", evt => {
+                 console.log(firstName.value());
+               });
+
+               // Listen to course grained events
+               firstName.on("model_changed", evt => {
+                 console.log("change");
+               });
+
+               // Set the string
+               firstName.set("Ted"); // "Ted", "change"
+
+               // Delete the "T" at index 1
+               firstName.remove(0, 1); // "ed", "change"
+
+               // Insert an "N" at index 0.
+               firstName.insert("N", 0); // "Ned", "change"
+             });
+           });
+
+  - title: Users & Authentication
+    icon: /assets/img/features/users-and-authentication.png
+    tagline: Use the built in user store, or integrate with your own identity management system using JWTs.
+    descriptionTitle: Flexible Authentication Made Easy
+    description: Whether you are building something quickly from scratch or want to add collaborative features to an existing product, we have an authentication solution to meet your needs. If you don’t already have a user store, you can manage your users in Convergence and authenticate them using a username and password stored in our system. This is the easiest way to get started.If you already have an identity management system, you can integrate with Convergence by leveraging a JSON Web Token (JWT). When using a JWT, a trust relationship is set up between your authentication store and Convergence. Users are automatically created in Convergence when authenticated via JWTs.
+    code: |-
+           domain.models().open(“collection”, model).then( model => {
+             const rtString = model.elementAt(“myString”);
+
+             // Create and publish a local cursor.
+             const localCursor = rtString.indexReference("cursor");
+             localCursor.set(3);
+             localCursor.publish(); // Listen for remote references.
+
+             rtString.on("reference", refEvent => {
+               const reference = refEvent.reference;
+               reference.on("set", e => {
+                 console.log(“remote cursor set”, e.value);
+               });
+
+               reference.on("cleared", e => {
+                 console.log(“remote cursor cleared”);
+               });
+
+               reference.on("disposed", e => {
+                 console.log(“no more cursor”);
+               });
+             });
+           });
+
+  - title: Realtime Administration
+    icon: /assets/img/features/realtime-admin.png
+    tagline: Monitor your App in real time. Interact with your data like never before.
+    descriptionTitle: Powerful Tools for Users, Data and More
+    description: Convergence provides access to an intuitive administration interface with every account. Organize your data models at three different levels, add users, and see your platform usage and plan details at a glance. Included in the web UI is the Sapphire Model Editor, our open-source data model viewer/editor. It is an indispensable tool for debugging your data and making granular modifications, much like a traditional database client but (of course) with real time updates.
+    image: "/assets/img/features/admin-ui.jpg"

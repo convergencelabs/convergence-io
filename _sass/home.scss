@@ -1,0 +1,137 @@
+@import "features";
+
+.alpha-invite {
+  background-color: #233444;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 2em;
+  padding: 40px;
+
+  h2 {
+    font-weight: 700;
+    color: #FFF;
+    margin-bottom: 0;
+  }
+
+  i.fa {
+    margin-left: 10px;
+  }
+
+  .orange {
+    color: #e87717;
+  }
+}
+
+
+/* ==========================================================================
+Intro
+========================================================================== */
+#intro {
+  .headline {
+    margin-top: 0;
+  }
+}
+
+/* ==========================================================================
+Sign Up
+========================================================================== */
+#sign-up {
+  background: #0491dd;
+  .headline {
+    margin-bottom: 0;
+  }
+
+  padding-bottom: 50px;
+}
+
+
+/* ==========================================================================
+Headline
+========================================================================== */
+.headline {
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  margin-top: 25px;
+  margin-bottom: 50px;
+
+  h1 {
+    color: #31373a;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #DDD;
+    display: inline-block;
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    margin-bottom: 40px;
+    font-weight: 100;
+    font-size: 16px;
+    color: #2b2b2b;
+
+    &.narrative {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+/* ==========================================================================
+getting-started
+============================================================================ */
+#getting-started {
+  .headline {
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+
+  .item {
+    margin-bottom: 40px;
+    position: relative;
+    border: 1px solid #E5E5E5;
+    background-color: #FFF;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 3px;
+    min-height: 200px;
+
+
+    h3 {
+      padding: 10px 0 10px 0;
+    }
+
+    p {
+      clear: both;
+    }
+
+    .detail {
+      text-align: justify;
+    }
+
+    img {
+      float: left;
+      padding: 0 30px 0 0;
+      height: 150px;
+    }
+
+    a {
+      margin-top: 25px;
+      float: right;
+    }
+  }
+}
+.max1200 {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.hide {
+  display: none;
+}
+

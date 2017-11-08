@@ -1,0 +1,98 @@
+/* ==========================================================================
+Basic Styling
+========================================================================== */
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  color: #7a7a7a;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-family: "Raleway", Lucida Sans Unicode, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  transition: all .50s ease-in-out;
+  -moz-transition: all .50s ease-in-out;
+  -webkit-transition: all .50s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h3 {
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+a {
+  -webkit-transition: all 150ms ease-in;
+  -moz-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+  color: #00a8d6;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: #007DA0;
+  outline: none;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #08b4da;
+  color: #FFF;
+}
+
+::selection {
+  text-shadow: none;
+  background: #08b4da;
+  color: #FFF;
+}
+
+img::selection {
+  background: 0 0;
+}
+
+img::-moz-selection {
+  background: 0 0;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-top: 1px solid #EFEFEF;
+}
+
+body {
+  webkit-tap-highlight-color: rgba(255, 255, 255, .2);
+}
+
+form {
+  margin-bottom: 0;
+}

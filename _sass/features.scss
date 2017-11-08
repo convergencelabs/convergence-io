@@ -1,0 +1,128 @@
+#features {
+  background: #233444;
+  color: white;
+
+  .row {
+    display: flex;
+  }
+
+  .feature-more {
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
+
+  .feature-highlight {
+    text-align: center;
+    cursor: pointer;
+    margin: 20px 0 20px 0;
+    display: flex;
+
+    &.feature-open .feature {
+      i.fa.fa-chevron-up {
+        display: inline;
+        opacity: 1;
+      }
+
+      i.fa.fa-chevron-down {
+        display: none;
+      }
+    }
+
+
+    &:not(:first-child) {
+      border-left: 1px solid gray;
+    }
+
+    .feature {
+      padding: 30px 40px 20px 40px;
+      position: relative;
+      flex: 1;
+
+      img {
+        width: 50px !important;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0092dd;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .overview {
+        margin-bottom: 10px;
+      }
+
+      i.fa {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 0;
+
+        margin-top: 20px;
+        display: block;
+        opacity: 0;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        color: #e87717;
+      }
+
+      i.fa.fa-chevron-up {
+        display: none;
+      }
+
+      &:hover {
+        h3 {
+          color: #e87717;
+        }
+
+        i.fa {
+          opacity: 1;
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .feature-detail {
+    background: white;
+    color: #333;
+    overflow: hidden;
+
+    -webkit-transition: width 0.3s, height 1s, opacity 0.3s;
+    transition: width 0.3s, height 1s, opacity 0.3s;
+
+    &.feature-hidden {
+      height: 0;
+    }
+
+    .description, .code, .image {
+      padding: 20px;
+    }
+
+    .image {
+      text-align: right;
+
+      img {
+        height: 400px;
+      }
+    }
+
+    .description {
+      text-align: justify;
+    }
+
+    pre {
+      height: 400px;
+      padding: 0;
+      overflow: auto;
+      border: 2px solid slategray;
+      background: #242420;
+    }
+  }
+}

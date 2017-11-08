@@ -1,0 +1,15 @@
+<div id="feature-box-{{include.id}}"
+     class="col-md-4 feature-highlight"
+     onclick="selectFeature('{{include.id}}');"
+     ga-on="click"
+     ga-event-category="Internal click"
+     ga-event-action="Homepage feature"
+     ga-event-label="Collaboration Awareness">
+  <div class="feature">
+    <img class="svg-icon" src="{{ include.iconUrl }}" alt="awareness">
+    <h3>{{ include.title }}</h3>
+    <div class="overview">{{ include.description}}</div>
+    <i class="fa fa-chevron-down"></i>
+    <i class="fa fa-chevron-up"></i>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="feature-detail-{{include.id}}" class="container-fluid feature-detail feature-hidden" ga-on="click" ga-event-category="Internal click"
+     ga-event-action="Homepage feature" ga-event-label="Real Time Data">
+  <div class="row">
+    <div class="col-md-5 description">
+      <h3>{{ include.title }}</h3>
+      {{ include.description }}
+    </div>
+
+    {% if include.image %}
+    <div class="col-md-7 image">
+      <img src="{{include.image}}" />
+    </div>
+    {% else if include.code %}
+    <div class="col-md-7 code">
+      <pre class="code-lines-wrapper"><code class="javascript">{{include.code}}</code></pre>
+    </div>
+    {% endif %}
+  </div>
+</div>

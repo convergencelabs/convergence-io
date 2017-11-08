@@ -1,0 +1,277 @@
+
+/* ==========================================================================
+Classes
+========================================================================== */
+.cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.subline {
+  font-size: 24px;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+.section20 {
+  padding: 20px 0;
+}
+
+.section30 {
+  padding: 30px 0;
+}
+
+.padding40 {
+  padding: 40px 0;
+}
+
+.padding50 {
+  padding: 50px 0;
+}
+
+.padding60 {
+  padding: 60px 0;
+}
+
+.paddingtop-70 {
+  padding-top: 70px;
+}
+
+.paddingtop-40 {
+  padding-top: 40px;
+}
+
+.nopadding-bottom {
+  padding-bottom: 0;
+}
+
+.bordered {
+  border: 1px solid #EFEFEF;
+}
+
+.border-left {
+  border-left: 1px solid #EFEFEF;
+}
+
+.border-right {
+  border-right: 1px solid #EFEFEF;
+}
+
+.border-top {
+  border-top: 1px solid #EFEFEF;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.separator30 {
+  margin: 30px 0;
+}
+
+.separator60 {
+  margin: 60px 0;
+}
+
+.margintop-30 {
+  margin-top: 30px;
+}
+
+.margintop-40 {
+  margin-top: 40px;
+}
+
+.margintop-70 {
+  margin-top: 70px;
+}
+
+.marginbottom-10 {
+  margin-bottom: 10px;
+}
+
+.nomargin-top {
+  margin-top: 0;
+}
+
+.nomargin-bottom {
+  margin-bottom: 0;
+}
+
+.divider70 {
+  clear: both;
+  height: 70px;
+}
+
+.divider50 {
+  clear: both;
+  height: 50px;
+}
+
+.divider20 {
+  clear: both;
+  height: 20px;
+}
+
+.divider35 {
+  clear: both;
+  height: 35px;
+}
+
+.margin50 {
+  margin: 50px 0;
+}
+
+.margin20 {
+  margin: 20px 0;
+}
+
+.tick-list {
+  margin: 15px 0;
+}
+
+.tick-list li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.tick-list li i {
+  margin-right: 10px;
+  color: #00a8d6;
+}
+
+.normal-list {
+  list-style-type: disc;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.normal-list li {
+  margin-bottom: 5px;
+}
+
+.green-arrow {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.green-arrow li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+}
+
+.green-arrow li:before {
+  display: inline-block;
+  text-align: center;
+  font-family: FontAwesome;
+  content: "\f00c";
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  color: #72B569;
+}
+
+.font-icon-list li {
+}
+
+.font-icon-list i {
+  color: rgba(0, 0, 0, 0.6);
+  margin-right: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center img {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 0;
+  padding: 15px 35px;
+  font-weight: bold;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #08b4da;
+  color: #FFF;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 2px solid #FFF;
+  color: #fff;
+}
+
+.btn-transparent:hover {
+  background-color: #2a2a2a;
+  border-color: #2a2a2a;
+}
+
+.btn-price {
+  color: #FFF;
+}
+
+.btn-price:hover {
+  background-color: #FFF;
+  border-color: #FFF;
+  color: #2a2a2a;
+}
+
+.arrow-bottom {
+  position: relative;
+}
+
+.arrow-bottom:after {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50px;
+  position: absolute;
+  content: "";
+  border: 25px solid;
+  border-color: #FAFAFA transparent transparent transparent;
+  display: block;
+}
+
+.mw800 {
+  max-width: 800px;
+  margin: auto;
+}
+
+.legal {
+  text-align: justify;
+  p, li {
+    color: #252525;
+  }
+}
+
+/* ==========================================================================
+Line Font
+========================================================================== */
+.line-font {
+  font-size: 48px;
+}
+
+.line-font-small {
+  font-size: 20px;
+}

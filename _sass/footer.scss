@@ -1,0 +1,137 @@
+/* ==========================================================================
+Footer
+ ========================================================================== */
+.footer {
+  &.footer-top {
+    background-color: #2b2b2b;
+    padding: 70px 0 30px 0;
+  }
+
+  &.footer-sub {
+    background-color: #242424;
+    padding: 10px 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+
+  p, a {
+    color: #ADADAD;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 3px 0;
+    font-size: 14px;
+  }
+
+  i {
+    color: #f8f8f8;
+  }
+
+  .copyright {
+    float: right;
+  }
+
+  .copyright i {
+    color: #FF3D7F;
+    margin: 0 5px;
+  }
+
+  .contact-list li {
+    color: #ADADAD;
+    margin-bottom: 5px;
+  }
+
+  .contact-list i {
+    margin-right: 15px;
+  }
+
+  .quick-links li {
+    padding-left: 15px;
+    position: relative;
+  }
+
+  .quick-links li:before {
+    display: inline-block;
+    text-align: center;
+    font-family: FontAwesome;
+    content: "\f105";
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    color: #f8f8f8;
+  }
+}
+
+
+/* ==========================================================================
+Social Links
+ ========================================================================== */
+.social {
+}
+
+.social li {
+  padding: 0;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 35px;
+  webkit-transition: background-color 400ms ease-out 0.2s;
+  -moz-transition: background-color 400ms ease-out 0.2s;
+  -o-transition: background-color 400ms ease-out 0.2s;
+  transition: background-color 400ms ease-out 0.2s;
+  margin-bottom: 5px;
+}
+
+.social li a {
+  color: #fff;
+}
+
+.social li.facebook {
+  background: #204385;
+}
+
+.social li.twitter {
+  background: #2aa9e0;
+}
+
+.social li.github {
+  background: #b8b8b8;
+}
+
+.social li.linkedin {
+  background: #0073b2;
+}
+
+.social li.skype {
+  background: #00b0f6;
+}
+
+.social li.medium {
+  background: #67e2ac;
+}
+
+.social li:hover {
+  background: #31373a;
+  cursor: pointer;
+}
