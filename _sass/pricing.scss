@@ -65,13 +65,38 @@
 }
 
 .popular .panel-heading {
-  background: #08b4da;
-}
-
-.popular .panel-body {
   background: #0AA9CC;
 }
 
-.popular .panel-footer {
+.popular .panel-body {
   background: #08b4da;
+}
+
+.popular .panel-footer {
+  background: #0AA9CC;
+}
+
+
+.coming .panel-heading {
+  background: #c8c8c8;
+}
+
+.coming .panel-body {
+  background: #dedede;
+}
+
+.coming .panel-footer {
+  background: #c8c8c8;
+}
+
+.enterprise .panel-heading {
+  background: #4b68ad;
+}
+
+.enterprise .panel-body {
+  background: #558cda;
+}
+
+.enterprise .panel-footer {
+  background: #4b68ad;
 }
