@@ -1,0 +1,19 @@
+.learn {
+  max-width: 1000px;
+  margin: auto;
+
+  .learn-box {
+    border: 1px solid #ddd;
+    padding: 50px;
+    margin-bottom: 30px;
+
+    img {
+      width: 150px !important;
+      margin: 0 auto 20px 0;
+    }
+
+    a.btn {
+      margin-top: 15px;
+    }
+  }
+}

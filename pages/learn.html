@@ -1,0 +1,11 @@
+---
+title: Learn
+permalink: /learn/
+layout: page
+---
+
+<div class="container-fluid learn">
+  {% for item in site.data.learn %}
+    {% include learn-box.html learn=item %}
+  {% endfor %}
+</div>

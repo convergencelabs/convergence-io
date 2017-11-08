@@ -1,0 +1,30 @@
+- title: 10-Minute Tutorial
+  icon: https://convergencelabs.com/wp-content/uploads/2016/05/data-types.png
+  link: /tutorial/
+  content: Get a glimpse of the platform’s power. See how easy it is to build a collaborative HTML &lt;textarea&gt; with our RealTimeModel API.
+  button: View Tutorial
+
+- title: Getting Started
+  icon: https://convergencelabs.com/wp-content/themes/spacious-child/images/icon/started.png
+  link: /getting-started/
+  content: Have a Convergence account? Build a simple app quickly with this guide and the accompanying GitHub repository.
+  button: Get Started
+
+- title: Examples
+  icon: https://convergencelabs.com/wp-content/themes/spacious-child/images/icon/smartphone.png
+  link: https://examples.convergence.io
+  content: To get a sense for the collaborative features, all our examples are best viewed simultaneously in two browser windows. Play around with one and see the realtime updates in the other.
+  button: View Examples
+
+- title: Developer Guide
+  icon: https://convergencelabs.com/wp-content/themes/spacious-child/images/icon/dev.png
+  link: https://docs.convergence.io/guide/
+  content:  The developer guide provide a detailed overview of the Convergence platform. It’s a good place to start to get a feel for what the platform can do and how to use it.
+  button: View Guide
+
+- title: FAQ
+  icon: https://convergencelabs.com/wp-content/themes/spacious-child/images/icon/faq.png
+  link: /faq/
+  content:  Find answers to commonly asked quetions in our Frequenty Asked Questions page..
+  button: Explore FAQs
+
