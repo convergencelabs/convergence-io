@@ -39,3 +39,21 @@ function selectFeature(id) {
     selectedBox.addClass(o);
   }
 }
+
+function initAccordion(id) {
+  const root = $("#" + id);
+  const toggles = root.find(".toggle .toggle-title");
+
+  if (toggles.hasClass('active')) {
+    $(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
+  }
+
+  toggles.click(function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
+    }
+    else {
+      $(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
+    }
+  });
+}

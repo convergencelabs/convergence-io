@@ -1,0 +1,8 @@
+<div class="faq-group">
+  <h2>{{include.group.title}}</h2>
+  <div class="questions">
+  {% for item in include.group.questions %}
+    {% include accordion-item.html title=item.q content=item.a %}
+  {% endfor %}
+  </div>
+</div>
