@@ -1,5 +1,0 @@
-export AWS_ACCESS_KEY_ID=AKIAILEKYTI2PWPUARNA
-export AWS_SECRET_ACCESS_KEY=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
-export AWS_DEFAULT_REGION=us-west-2
-
-s3_website push

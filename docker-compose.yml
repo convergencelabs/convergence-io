@@ -1,0 +1,15 @@
+version: "2"
+services:
+
+  www:
+    build:
+      context: ./
+
+    restart: always
+
+    volumes:
+      - /home/rancher/ssl:/etc/nginx/ssl
+
+    ports:
+      - "443:443"
+      - "80:80"
