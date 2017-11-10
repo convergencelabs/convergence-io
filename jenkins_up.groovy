@@ -9,7 +9,7 @@ node {
     stage 'Checkout'
     checkout scm
 
-    docker.withServer(env.DockerProdHost, 'DockerProdCerts') {
+    docker.withServer(env.ConvergenceIOWebHost, 'ConvergenceIOWebDocker') {
       docker.withRegistry('https://nexus.convergencelabs.tech:18443/', 'NexusRepo') {
         stage 'Up'
         sh 'docker-compose -p convergence-io up -d'

@@ -9,7 +9,7 @@ node {
     stage 'Checkout'
     checkout scm
 
-    docker.withServer(env.DockerProdHost, 'DockerProdCerts') {
+    docker.withServer(env.ConvergenceIOWebHost, 'ConvergenceIOWebDocker') {
       stage 'Renew Certs'
       sh '''
       docker run --rm \
