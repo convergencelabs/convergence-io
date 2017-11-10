@@ -9,6 +9,17 @@ node {
     stage 'Checkout'
     checkout scm
 
+    stage 'Build'
+    docker.withRegistry('https://nexus.convergencelabs.tech:18443/', 'NexusRepo') {
+      def jekyll = docker.image('jekyll:jekyll')
+      jekyll.pull()
+
+      docker.image(jekyll.imageName()) {
+
+        sh 'jekyll build'
+      }
+    }
+
     docker.withServer(env.ConvergenceIOWebHost, 'ConvergenceIOWebDocker') {
       docker.withRegistry('https://nexus.convergencelabs.tech:18443/', 'NexusRepo') {
         stage 'Up'
