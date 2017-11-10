@@ -87,16 +87,25 @@ getting-started
 #getting-started {
   .headline {
     margin-top: 25px;
-    margin-bottom: 0;
+    margin-bottom: 25px;
+  }
+
+  .row {
+    display: flex;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .item {
+    flex: 1;
     margin-bottom: 40px;
     position: relative;
     border: 1px solid #E5E5E5;
     background-color: #FFF;
     padding: 20px;
-    margin-top: 30px;
     border-radius: 3px;
     min-height: 200px;
 

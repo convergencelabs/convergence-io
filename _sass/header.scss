@@ -73,6 +73,10 @@
   height: auto;
 }
 
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #0fb3da;
+}
+
 .login-signup {
   margin-left: 10px;
 
