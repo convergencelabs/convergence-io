@@ -14,8 +14,7 @@ node {
       def jekyll = docker.image('jekyll/jekyll')
       jekyll.pull()
 
-      docker.image(jekyll.imageName()) {
-
+      docker.image(jekyll.imageName()).inside() {
         sh 'jekyll build'
       }
     }
