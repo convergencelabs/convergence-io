@@ -11,12 +11,7 @@ node {
 
     stage 'Build'
     docker.withRegistry('https://nexus.convergencelabs.tech:18443/', 'NexusRepo') {
-      def jekyll = docker.image('jekyll/jekyll')
-      jekyll.pull()
-
-      docker.image(jekyll.imageName()).inside() {
-        sh 'jekyll build'
-      }
+      sh 'docker run --rm  --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:3.6.2 jekyll build'
     }
 
     docker.withServer(env.ConvergenceIOWebHost, 'ConvergenceIOWebDocker') {
