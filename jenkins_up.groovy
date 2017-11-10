@@ -11,7 +11,7 @@ node {
 
     stage 'Build'
     docker.withRegistry('https://nexus.convergencelabs.tech:18443/', 'NexusRepo') {
-      def jekyll = docker.image('jekyll:jekyll')
+      def jekyll = docker.image('jekyll/jekyll')
       jekyll.pull()
 
       docker.image(jekyll.imageName()) {
