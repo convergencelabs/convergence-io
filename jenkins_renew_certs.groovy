@@ -1,7 +1,7 @@
 node {
   stage 'Approval'
   def shouldContinue = input(
-    message: 'Update the "All Containers" to the latest image?',
+    message: 'Renew lets encrypt ssl certs?',
     ok: 'Continue'
   )
   
