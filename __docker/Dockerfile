@@ -1,4 +1,5 @@
 FROM nginx:stable-alpine
 
+COPY nginx/ssl/* /etc/nginx/ssl/
 COPY nginx-default.conf /etc/nginx/conf.d/default.conf
 COPY _site /usr/share/nginx/html

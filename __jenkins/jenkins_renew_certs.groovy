@@ -23,6 +23,12 @@ node {
         --non-interactive \
         -m sysadmin@convergencelabs.com \
         -d convergence.io -d www.convergence.io
+
+      docker run -i --rm --name letsencrypt \
+           --volume=/home/rancher/letsencrypt_certs/:/etc/letsencrypt/ \
+           --volume=/home/rancher/letsencrypt_www:/var/www \
+           certbot/certbot auth --authenticator webroot --webroot-path /var/www --renew-by-default --server \
+           https://acme-v01.api.letsencrypt.org/directory -d my.example.com
       '''
 
       stage 'Copy Certs'

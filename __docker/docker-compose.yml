@@ -2,13 +2,13 @@ version: "2"
 services:
 
   www:
-    build:
-      context: ./
+    image: nexus.convergencelabs.tech:18444/convergence-io-www
 
     restart: always
 
     volumes:
       - /home/rancher/ssl:/etc/nginx/ssl
+      - /home/rancher/letsencrypt-acme:/tmp/letsencrypt/www
 
     ports:
       - "443:443"
