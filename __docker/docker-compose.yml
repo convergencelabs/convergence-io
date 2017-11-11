@@ -8,7 +8,7 @@ services:
 
     volumes:
       - /home/rancher/ssl:/etc/nginx/ssl
-      - /home/rancher/letsencrypt_acme:/tmp/letsencrypt/www
+      - /home/rancher/letsencrypt_acme:/tmp/letsencrypt/acme-challenge
 
     ports:
       - "443:443"
