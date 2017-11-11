@@ -31,8 +31,8 @@ node {
 
       stage 'Copy Certs'
       sh '''
-      sudo cp -a `readlink /home/rancher/letsencrypt_certs/live/convergence.io/fullchain.pem` /home/rancher/ssl/server.crt
-      sudo cp -a `readlink /home/rancher/letsencrypt_certs/live/convergence.io/privkey.pem` /home/rancher/ssl/server.key
+      sudo cp -a `readlink -f /home/rancher/letsencrypt_certs/live/convergence.io/fullchain.pem` /home/rancher/ssl/server.crt
+      sudo cp -a `readlink -f /home/rancher/letsencrypt_certs/live/convergence.io/privkey.pem` /home/rancher/ssl/server.key
 
       '''
 
