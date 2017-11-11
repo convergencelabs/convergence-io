@@ -77,13 +77,20 @@
   color: #0fb3da;
 }
 
-.login-signup {
-  margin-left: 10px;
-
-  a.btn {
+.navbar, .navbar-inverse {
+  .navbar-nav > li > a.btn {
     color: white;
     margin: 10px 0 0 10px;
     padding: 4px 20px;
+  }
+}
+
+.navbar-collapse {
+  .navbar-nav > li > a.btn {
+    color: white;
+    width: 100px;
+    padding: 4px 20px;
+    margin: 10px 15px;
   }
 }
 
