@@ -1,4 +1,3 @@
-
 /* ==========================================================================
 Classes
 ========================================================================== */
@@ -162,28 +161,34 @@ Classes
   margin-bottom: 5px;
 }
 
-.green-arrow {
+.green-arrow, .white-arrow {
   list-style: none;
   margin-bottom: 15px;
-}
 
-.green-arrow li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 5px;
+  li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+  }
+
+  li:before {
+    display: inline-block;
+    text-align: center;
+    font-family: FontAwesome;
+    content: "\f00c";
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in;
+
+  }
 }
 
 .green-arrow li:before {
-  display: inline-block;
-  text-align: center;
-  font-family: FontAwesome;
-  content: "\f00c";
-  position: absolute;
-  left: 0;
-  transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
   color: #72B569;
+}
+
+.white-arrow li:before {
+  color: #FFF;
 }
 
 .font-icon-list li {
