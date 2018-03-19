@@ -4,7 +4,7 @@
       a: Because we think everyone should be able to build highly collaborative apps for their users without having to be experts in  distributed concurrency control algorithms or having to build chat, presence, users, security, and other functionality from scratch.
 
     - q: When will Convergence be available?
-      a: We have been working on Convergence for amost two years now. We want to ensure that the product is easy to use and rock solid before launching. We are currently executing a private beta and have several participants, several of whom are going live shortly. Within the next few months we anticipate launching a public beta program, followed by a general availbility. We will keep you posted.
+      a: We have been working on Convergence for almost two years now. We want to ensure that the product is easy to use and rock solid before launching. We are currently executing a private beta and have several participants, several of whom are going live shortly. Within the next few months we anticipate launching a public beta program, followed by a general availability. We will keep you posted.
 
     - q: How can I get approved for the private beta?
       a: We are looking for developers who are serious about building an application. While we would like to support everyone, we have gotten a lot of interest and are not approving people that just want to "play" with the service. If you have an actual application in mind that Convergence could help with, please tell us about it when you request an invite.
@@ -15,19 +15,19 @@
     - q: What languages are supported?
       a: Presently we are launching with support for <strong>JavaScript</strong> and <strong>TypeScript</strong> along with any other interoperable languages. In the near term we also anticipate a Java / Scala client as well.
 
-    - q: Is the API Stable?
+    - q: Is the API stable?
       a: Not quite, but it is getting there. We will be updating our documentation to identify areas of the API that are still under development and may change.
 
     - q: Can I request a feature?
-      a: Absolutely! At the moment the best way is to email use at info [at] convergencelabs [dot] com. We plan on opening up a discussion forum soon to allow better collaboration with the community.
+      a: Absolutely! The best option is to create a new post on the <a href="https://forum.convergence.io">Convergence community forum</a>.
 
     - q: Can I install Convergence on my own infrastructure?
-      a: We are considering on this option right now. If you are interested please let us know.
+      a: Yes, we provide licenses and dedicated support for those with on-premise needs. Please <a href="mailto:contact@convergence.io">contact us</a> for details.
 
 - title: Convergence Labs
   questions:
     - q: Who is Convergence Labs?
-      a: Convergence Labs is the company that makes the Convergence Service. In addition to building Convergence (the product), Convergence Labs are eperts in building real time collaborative end user applications. We help customers build highly effective collaborative applications.
+      a: Convergence Labs is the company that makes the Convergence Service. In addition to building Convergence (the product), Convergence Labs are experts in building real time collaborative end user applications. We help customers build highly effective collaborative applications.
 
     - q: Do you always use Convergence when building an app?
-      a: Obviously we think Convergence is a great choice for many applications, but some times the customer has a particular tech stack in mind. The value of Convergence Labs is our in-depth experieince in building collaborative applications.
+      a: We think Convergence is a great choice for many applications, but some times the customer has a particular tech stack in mind. Our core competency at Convergence Labs is industry-leading domain knowledge and expertise in building collaborative applications.

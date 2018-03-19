@@ -17,3 +17,7 @@ This repository hosts the source for the convergence.io. The website is built us
 
 ## Jekyll Build
 If you just want to build the site run `jekyll build`. The site will be generated into the `_site` directory.
+
+## Deployment
+docker build -t nexus.convergencelabs.tech:18444/convergence-io-www -f __docker/Dockerfile .
+docker push nexus.convergencelabs.tech:18444/convergence-io-www

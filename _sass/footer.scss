@@ -91,8 +91,6 @@ Social Links
 .social li {
   padding: 0;
   display: inline-block;
-  width: 35px;
-  height: 35px;
   border-radius: 3px;
   text-align: center;
   line-height: 35px;
@@ -101,10 +99,15 @@ Social Links
   -o-transition: background-color 400ms ease-out 0.2s;
   transition: background-color 400ms ease-out 0.2s;
   margin-bottom: 5px;
+  font-size: 1.2em;
 }
 
 .social li a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
   color: #fff;
+  margin-bottom: 0;
 }
 
 .social li.facebook {
@@ -132,6 +135,9 @@ Social Links
 }
 
 .social li:hover {
-  background: #31373a;
   cursor: pointer;
+
+  a {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
