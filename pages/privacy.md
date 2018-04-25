@@ -5,7 +5,7 @@ permalink: /privacy/
 ---
 
 ## Introduction
-This privacy policy discloses the privacy practices for www.convergencelabs.com. THIS PRIVACY POLICY APPLIES SOLELY TO INFORMATION COLLECTED BY THIS WEB SITE. It will notify you of the following:
+This privacy policy discloses the privacy practices for https://convergence.io. THIS PRIVACY POLICY APPLIES SOLELY TO INFORMATION COLLECTED BY THIS WEB SITE. It will notify you of the following:
 
 * What personally identifiable information is collected from you through the web site, how it is used and with whom it may be shared.
 * What choices are available to you regarding the use of your data.
