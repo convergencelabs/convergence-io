@@ -33,9 +33,7 @@ plugins:
 exclude:
   - README.md
   - Dockerfile
-  - docker-compose.yml
-  - nginx-default.conf
-  - jenkins
+  - Jenkinsfile
   - Gemfile
   - Gemfile.lock
   - node_modules
