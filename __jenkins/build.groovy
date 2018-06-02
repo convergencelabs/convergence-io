@@ -5,7 +5,7 @@ jekyllPod { label ->
 
     stage('Jekyll Build') {
       container('jekyll') {
-        sh 'jekyll build'
+        sh 'bundle exec jekyll build'
       }
     }
 
