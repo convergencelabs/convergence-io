@@ -18,16 +18,20 @@
 Media Queries
  ========================================================================== */
 
+@media only screen and (max-width: 1200px) {
+  .nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   #header .navigation .hide-smaller {
     display: none;
   }
-  .clear-small {
-    clear: both;
+  #header .container {
+    width: auto;
   }
-}
-
-@media only screen and (max-width: 890px) {
   .navbar-collapse .navbar-nav > li > a.btn {
     margin-left: 10px;
     margin-right: 10px;
@@ -35,11 +39,16 @@ Media Queries
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+@media only screen and (max-width: 890px) {
   .nav > li > a {
     padding-left: 5px;
     padding-right: 5px;
   }
-  
+  .clear-small {
+    clear: both;
+  }
 }
 
 /* ------ Mobile Landscape Size to Tablet Portrait (devices and browsers) ------*/

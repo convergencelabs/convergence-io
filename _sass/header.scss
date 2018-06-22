@@ -37,6 +37,10 @@
   transition: all 400ms linear;
 }
 
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 0;
+}
+
 .navbar-toggle {
   padding: 4px 6px;
   font-size: 16px;
