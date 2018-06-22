@@ -17,14 +17,29 @@
 /* ==========================================================================
 Media Queries
  ========================================================================== */
-/* ------ Tablet Portrait size to standard 960 (devices and browsers) ------*/
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  img {
-    margin: 20px auto;
+
+@media only screen and (max-width: 992px) {
+  #header .navigation .hide-smaller {
+    display: none;
   }
-  .img-thumbnail {
-    margin: 0;
+  .clear-small {
+    clear: both;
   }
+}
+
+@media only screen and (max-width: 890px) {
+  .navbar-collapse .navbar-nav > li > a.btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 80px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav > li > a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
 }
 
 /* ------ Mobile Landscape Size to Tablet Portrait (devices and browsers) ------*/
@@ -33,10 +48,14 @@ Media Queries
     background-color: #FFF;
     padding: 0;
   }
-  .navbar > .container .navbar-brand {
+  .navbar > .container-fluid .navbar-brand {
     margin-left: 15px;
     color: #1a1a1a;
-    margin-top: 15px;
+
+    img {
+      margin: 10px 0;
+      height: 38px;
+    }
   }
   .menu-right {
     float: none;
@@ -53,6 +72,7 @@ Media Queries
   img {
     display: block;
     margin: 20px auto;
+    max-width: 100%;
   }
   .section {
     padding: 70px 0;
@@ -65,6 +85,12 @@ Media Queries
   }
   .img-thumbnail {
     margin: 0;
+  }
+  .terms-privacy { 
+    text-align: left;
+  }
+  .alpha-invite {
+    h2, a { margin: 10px 0; }
   }
 }
 
@@ -121,5 +147,20 @@ Media Queries
   }
   .copyright {
     float: none;
+  }
+  .convergence-list { 
+    margin: 10px 0;
+  }
+  .footer.footer-top { padding-top: 20px; }
+  .footer h3 { margin-top: 30px; }
+}
+
+@media only screen and (max-width: 370px) {
+  .navbar > .container-fluid .navbar-brand {
+    span { font-size: 24px;}
+    img {
+      height: 34px;
+      margin: 12px 0 8px;
+    }
   }
 }

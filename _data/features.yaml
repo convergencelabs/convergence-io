@@ -5,8 +5,7 @@ row1:
     descriptionTitle: Your Data Comes Alive in Realtime
     description: Realtime data is at the heart of any collaborative app. Like other services, Convergence stores your data in the cloud and allows access to it from anywhere and any device. But it is the only platform designed from the ground up for highly interactive applications and real-time, shared, simultaneously modifiable data. As one client changes the data, all other clients are kept in sync and our concurrency control algorithms ensure data integrity is maintained. In the example to the right, we open a data model and get the “firstName” property&#58; this is a RealTimeString object. From that we set some listeners on the firstName in order to see edits in real time. Then we do a series of mutations to the string.
     code: |-
-           https&#58;//api.convergence.io/realtime/domain/<username>/<domain-id>/";
-           Convergence.connectAnonymously().then(domain => {
+           Convergence.connectAnonymously(domainUrl).then(domain => {
              const modelService = domain.models();
              modelService.openModel("people", "fred").then(model => {
                // the model is {firstName: “Fred”, lastName: “Flanders”}
@@ -95,11 +94,10 @@ row2:
   - title: Presence
     icon: /assets/img/features/presence.png
     tagline: Easily track who is online and available to work with. Building and tracking buddy lists is simple.
-    descriptionTitle: See Whose Online and Ready To Collaborate
+    descriptionTitle: See Who's Online and Ready To Collaborate
     description: Effective communication requires knowing who is online, available, and working on what data. We provide a convenient presence API so you can design an application where your users aren't stepping on one another's toes.
     code: |-
-           https&#58;//api.convergence.io/realtime/domain/<username>/<domain-id>/";
-           Convergence.connectAnonymously().then(domain => {
+           Convergence.connectAnonymously(domainUrl).then(domain => {
              const modelService = domain.models();
              modelService.openModel("people", "fred").then(model => {
                // the model is {firstName: “Fred”, lastName: “Flanders”}

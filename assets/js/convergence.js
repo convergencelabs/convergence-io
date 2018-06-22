@@ -14,25 +14,25 @@ handleScroll();
 
 hljs.initHighlightingOnLoad();
 
-function selectFeature(id) {
-  const c = "feature-hidden";
-  const targetDetailId = "#feature-detail-" + id;
-  const toClose = $(".feature-detail").not(targetDetailId).not("." + c);
-  toClose.addClass(c);
+function selectFeature(id, section) {
+  const hiddenClass = "feature-hidden";
+  const targetDetailSelector = ".features-block-" + section + ' .feature-detail.index-' + id;
+  const toClose = $(".feature-detail").not(targetDetailSelector).not("." + hiddenClass);
+  toClose.addClass(hiddenClass);
 
-  const selectedFeature = $(targetDetailId);
-  if (selectedFeature.hasClass(c)) {
-    selectedFeature.removeClass(c);
+  const selectedFeature = $(targetDetailSelector);
+  if (selectedFeature.hasClass(hiddenClass)) {
+    selectedFeature.removeClass(hiddenClass);
   } else {
-    selectedFeature.addClass(c);
+    selectedFeature.addClass(hiddenClass);
   }
 
   const o = "feature-open";
-  const toggledBox = "#feature-box-" + id;
-  const boxes = $(".feature-highlight").not(toggledBox);
+  const clickedBoxSelector = ".features-block-" + section + ' .feature-highlight.index-' + id;
+  const boxes = $(".feature-highlight").not(clickedBoxSelector);
   boxes.removeClass(o);
 
-  const selectedBox = $(toggledBox);
+  const selectedBox = $(clickedBoxSelector);
   if (selectedBox.hasClass(o)) {
     selectedBox.removeClass(o);
   } else {

@@ -2,8 +2,10 @@
   background: #233444;
   color: white;
 
-  .row {
+  .flex-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .feature-more {
@@ -12,11 +14,15 @@
   }
 
   .feature-highlight {
+    flex-grow: 1;
+    width: 33.3%;
     text-align: center;
     cursor: pointer;
-    margin: 20px 0 20px 0;
-    display: flex;
 
+    &.index-1 { order: 10; }
+    &.index-2 { order: 20; }
+    &.index-3 { order: 30; }
+    
     &.feature-open .feature {
       i.fa.fa-chevron-up {
         display: inline;
@@ -34,7 +40,7 @@
     }
 
     .feature {
-      padding: 30px 40px 20px 40px;
+      padding: 20px 40px 40px 40px;
       position: relative;
       flex: 1;
 
@@ -56,16 +62,8 @@
       }
 
       i.fa {
-        position: absolute;
-        transform: translateX(-50%);
-        left: 50%;
-        bottom: 0;
-
-        margin-top: 20px;
         display: block;
         opacity: 0;
-        -webkit-transition: all .3s ease-in-out;
-        -moz-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
         color: #e87717;
       }
@@ -81,8 +79,6 @@
 
         i.fa {
           opacity: 1;
-          -webkit-transition: all .3s ease-in-out;
-          -moz-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
         }
       }
@@ -93,15 +89,21 @@
     background: white;
     color: #333;
     overflow: hidden;
-    max-height: 500px;
+    display: block;
+    width: 100%;
+    max-height: 2000px;
 
-    -webkit-transition: max-height 0.5s ease;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.5s ease-out;
 
+    &.index-1 { order: 40; }
+    &.index-2 { order: 50; }
+    &.index-3 { order: 60; }
 
     &.feature-hidden {
       max-height: 0;
     }
+
+    h3 { text-align: left; }
 
     .description, .code, .image {
       padding: 20px;
@@ -111,7 +113,7 @@
       text-align: right;
 
       img {
-        height: 400px;
+        max-width: 100%;
       }
     }
 
@@ -128,3 +130,32 @@
     }
   }
 }
+
+.touch {
+  #features .feature-highlight .feature {
+    i.fa {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #features {
+    .feature-highlight { 
+      flex-basis: 991px;
+
+      &:not(:nth-child(3)) {
+        border-bottom: 1px solid #fff;
+      }
+      
+      &:not(:first-child) {
+        border-left: none;
+      }
+    }
+    .feature-detail {
+      &.index-1 { order: 15; }
+      &.index-2 { order: 25; }
+      &.index-3 { order: 35; }
+    }
+  }
+} 

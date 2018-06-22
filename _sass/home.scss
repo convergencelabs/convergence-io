@@ -54,17 +54,7 @@ getting-started
     margin-bottom: 25px;
   }
 
-  .row {
-    display: flex;
-
-    > div {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
   .item {
-    flex: 1;
     margin-bottom: 40px;
     position: relative;
     border: 1px solid #E5E5E5;
@@ -72,7 +62,6 @@ getting-started
     padding: 20px;
     border-radius: 3px;
     min-height: 200px;
-
 
     h3 {
       padding: 10px 0 10px 0;
@@ -90,6 +79,7 @@ getting-started
       float: left;
       padding: 0 30px 0 0;
       height: 150px;
+      max-width: 100%;
     }
 
     a {
@@ -116,3 +106,14 @@ getting-started
   }
 }
 
+@media only screen and (max-width: 479px) {
+  #getting-started {
+    .item {
+      img {
+        float: none;
+        padding: 0;
+        height: auto;
+      }
+    }
+  }
+}

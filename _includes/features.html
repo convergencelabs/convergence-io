@@ -2,47 +2,37 @@
 <section id="features" class="section">
   <div class="max1200">
     <!-- First Feature Row -->
-    <div class="container-fluid">
-      <div class="row">
-        {% for f in site.data.features.row1 %}
-          {% assign id = "1_" | append: forloop.index %}
-          {% include feature-box.html id=id iconUrl=f.icon title=f.title description=f.tagline %}
-        {% endfor %}
-      </div>
-    </div>
+    <div class="container-fluid flex-container features-block-1">
+      {% for f in site.data.features.row1 %}
+        {% include feature-box.html id=forloop.index section=1 iconUrl=f.icon title=f.title description=f.tagline %}
+      {% endfor %}
+      {% for f in site.data.features.row1 %}
+        {% include feature-detail.html id=forloop.index section=1 title=f.descriptionTitle description=f.description code=f.code %}
+      {% endfor %}
+  </div>
 
-    {% for f in site.data.features.row1 %}
-      {% assign id = "1_" | append: forloop.index %}
-      {% include feature-detail.html id=id title=f.descriptionTitle description=f.description code=f.code %}
-    {% endfor %}
-
-    <div>
-      <div class="container-fluid feature-more">
-        <div class="row" id="pg-4-5">
-          <div class="col-md-12">
-            <a class="btn white fsize-21 btn-primary lato btn-border"
-               href="https://admin.convergence.io/request-invite" ga-on="click"
-               ga-event-category="Outbound link click" ga-event-action="Request invite"
-               ga-event-label="Get started with a free account">Get started with a free account</a>
-          </div>
+  <div>
+    <div class="container-fluid feature-more">
+      <div class="row" id="pg-4-5">
+        <div class="col-md-12">
+          <a class="btn white fsize-21 btn-primary lato btn-border"
+              href="https://admin.convergence.io/request-invite" ga-on="click"
+              ga-event-category="Outbound link click" ga-event-action="Request invite"
+              ga-event-label="Get started with a free account">Get started with a free account</a>
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Second Feature Row -->
-    <div class="container-fluid">
-      <div class="row">
-        {% for f in site.data.features.row2 %}
-          {% assign id = "2_" | append: forloop.index %}
-          {% include feature-box.html id=id iconUrl=f.icon title=f.title description=f.tagline %}
-        {% endfor %}
-      </div>
-    </div>
-
-    {% for f in site.data.features.row2 %}
-      {% assign id = "2_" | append: forloop.index %}
-    {% include feature-detail.html id=id title=f.descriptionTitle description=f.description code=f.code image=f.image %}
+    <div class="container-fluid flex-container features-block-2">
+      {% for f in site.data.features.row2 %}
+        {% include feature-box.html id=forloop.index section=2 iconUrl=f.icon title=f.title description=f.tagline %}
       {% endfor %}
+      {% for f in site.data.features.row2 %}
+        {% include feature-detail.html id=forloop.index section=2 title=f.descriptionTitle description=f.description code=f.code image=f.image %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 <!-- End Features -->

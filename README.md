@@ -19,5 +19,4 @@ This repository hosts the source for the convergence.io. The website is built us
 If you just want to build the site run `bundle exec jekyll build`. The site will be generated into the `_site` directory.
 
 ## Deployment
-docker build -t convergence-docker.dev.int.convergencelabs.tech/convergence-io-www -f __docker/Dockerfile .
-docker push convergence-docker.dev.int.convergencelabs.tech/convergence-io-www
+Simply delete the pod in the [Production Kubernetes dashboard](https://k8s.prod.convergencelabs.tech/#!/pod?namespace=convergence).  It'll get recreated from the latest version in source control.
