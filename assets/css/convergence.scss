@@ -57,7 +57,7 @@ Media Queries
     background-color: #FFF;
     padding: 0;
   }
-  .navbar > .container-fluid .navbar-brand {
+  .navbar > .container .navbar-brand {
     margin-left: 15px;
     color: #1a1a1a;
 
@@ -165,7 +165,7 @@ Media Queries
 }
 
 @media only screen and (max-width: 370px) {
-  .navbar > .container-fluid .navbar-brand {
+  .navbar > .container .navbar-brand {
     span { font-size: 24px;}
     img {
       height: 34px;
