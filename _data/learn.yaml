@@ -22,6 +22,12 @@
   content:  The developer guide provide a detailed overview of the Convergence platform. It’s a good place to start to get a feel for what the platform can do and how to use it.
   button: View Guide
 
+- title: API Docs
+  icon: /assets/img/learn-icons/api.png
+  link: https://docs.convergence.io/js-api/
+  content:  Read through the JavaScript API documents to get detailed information on the available methods in the Convergence Client.
+  button: View API
+
 - title: FAQ
   icon: /assets/img/learn-icons/faq.png
   link: /faq/
