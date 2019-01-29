@@ -11,6 +11,7 @@ This repository hosts the source for the convergence.io. The website is built us
 ## Development Setup
 
  * Ensure development dependencies are installed for your platform.
+ * bundle install
  * bundle exec jekyll serve
  * Open http://localhost:4000
 
