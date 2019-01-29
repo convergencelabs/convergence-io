@@ -19,29 +19,21 @@ layout: page
       <p><em>You will need a Convergence Account in order to get started. If you don’t already have one, <a
         href="https://admin.convergence.io/request-invite" ga-on="click" ga-event-category="Outbound link click" ga-event-action="Request invite" ga-event-label="Request invite">request one here</a>.</em>
       </p>
-      <p>Convergence provides high-level APIs for building realtime collaborative applications. Thus, we treat
-        <em>your</em> application’s users as first-class citizens. Any collaborative app needs users, and the easiest
-        way to add users is through the <a href="https://admin.convergence.io">Convergence Administration Console</a>
-        <sup><a href="#footnote-1">1</a></sup>.
-      </p>
-      <p>Log into your account. On the home page you will see a few cards representing domains<sup><a
-        href="#footnote-1">2</a></sup>. Click the ‘Users’ button on the Examples domain card, and then the plus icon at
-        right. Fill in a username, display name and simple password, and click “Create”. This will be the “end user”
-        that your application will connect as.
+      <p><a href="https://admin.convergence.io">Log in</a> to your account. There will be an "Example Domain" seeded there for you to get started quickly.  Click into it. You will see a box in the middle of the page displaying the connection URL for this domain<sup><a
+        href="#footnote-1">1</a></sup>.  Take note as you'll need this later.
       </p>
     </div>
   </div>
   <div class="row">
     <div class="col-md-4 col-sm-12 alt-band-title"><h2>Get the Code</h2></div>
     <div class="col-md-8 col-sm-12 alt-band-content">
-      <p>To get the code, clone (or fork) the <a href="https://github.com/convergencelabs/model-getting-started">Getting
+      <p>To get the code, clone or fork the <a href="https://github.com/convergencelabs/model-getting-started">Getting
         Started Repository</a> from GitHub:
       </p>
-      <pre><code class="bash">git clone https://github.com/convergencelabs/model-getting-started.git</code></pre>
+      <p><pre><code class="bash">git clone https://github.com/convergencelabs/model-getting-started.git</code></pre></p>
+      <p><em>Prefer a more hands-on approach? Follow our more in-depth <a href="/tutorial/">tutorial here</a></em>.</p>
       <p>Then, configure the application to connect to <em>your</em> domain using the user you just created. Copy <code>config.example.js</code>
-        to <code>config.js</code> and edit the three variables. You should have the username and password of the new
-        user, and you can get the connection URL from the Admin console. Just click on the Dashboard link in the sidebar
-        of the Examples domain and copy the Connection URL.
+        to <code>config.js</code> and edit the <code>DOMAIN_URL</code> value to what you saw in the Administration UI in the previous step.
       </p>
     </div>
   </div>
@@ -51,6 +43,7 @@ layout: page
       <p>Simply open <code>index.html</code> in your web browser to run the application. Open it a second time in
         another web browser and type in the textarea to see your changes propagated in real time!
       </p>
+      <p><em>Bonus: Back in the Administration console, click "Models" in the sidebar of the domain area, and click into the "getting-started" model. This is a real-time view of the contents of the model.  The data there will update immediately as you type in the textarea for easy, visual debugging.</em></p>
       <p>Want more? Check out the <a href="https://github.com/convergencelabs/examples">examples repository</a> in
         GitHub demonstrating activities, chat, and more.
       </p>
@@ -59,14 +52,7 @@ layout: page
   <div class="row footnotes">
     <div class="col-md-12 col-sm-12 alt-band-title">
       <ol>
-        <li id="footnote-1">We often talk about two different types of users: Administration and Domain Users. When you
-          signed up for Convergence, we created an Admin User for you, which allows you to sign into the Administration
-          Console and manage your account and domains. But when developing, you will be working within a single domain,
-          which has its own set of users. These represent users of the application that you will build. In this guide,
-          we will create users manually, but they can also be <a
-            href="https://docs.convergence.io/guide/authentication/overview.html">created automatically</a> using JWTs.
-        </li>
-        <li id="footnote-2">Domains are organizational entities: you can think of them as projects, different
+        <li id="footnote-1">Domains are organizational entities: you can think of them as projects, different
           environments (such as Prod or Staging), or some combination of both. Domains are self-encapsulated,
           configurable, and contain their own data and users. <a
             href="https://docs.convergence.io/guide/getting-started.html">See here</a> for more information.

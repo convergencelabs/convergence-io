@@ -1,14 +1,14 @@
-- title: 10-Minute Tutorial
-  icon: /assets/img/learn-icons/tutorial.png
-  link: /tutorial/
-  content: Get a glimpse of the platform’s power. See how easy it is to build a collaborative HTML &lt;textarea&gt; with our RealTimeModel API.
-  button: View Tutorial
-
 - title: Getting Started
   icon: /assets/img/learn-icons/getting-started.png
   link: /getting-started/
   content: Have a Convergence account? Build a simple app quickly with this guide and the accompanying GitHub repository.
   button: Get Started
+
+- title: 10-Minute Tutorial
+  icon: /assets/img/learn-icons/tutorial.png
+  link: /tutorial/
+  content: Get a glimpse of the platform’s power. See how easy it is to build a collaborative HTML &lt;textarea&gt; with our RealTimeModel API.
+  button: View Tutorial
 
 - title: Examples
   icon: /assets/img/learn-icons/examples.png

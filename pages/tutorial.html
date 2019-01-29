@@ -64,12 +64,11 @@ Convergence.connectAnonymously(domainUrl)
       </p>
       <pre class="codeblock"><code>function initApp(domain) {
   var modelService = domain.models();
-  // "examples" is a collection, "textarea" the model within it.
   // If the collection and/or model don't exist, they will be created for you.
-  modelService.open("examples", "textarea", function() {
-    // This method gets called if the model doesn't exist.
-    // Its return value will be the model's initial data.
-    return {textValue: "Hello World"};
+  modelService.openAutoCreate({
+    collection: "example", 
+    model: "getting-started",
+    data: { text: "Hello World"} 
   })
   .then(initModel)
   .catch(function(error) {
@@ -91,7 +90,7 @@ Convergence.connectAnonymously(domainUrl)
   // Sets the value of the text area and performs a two-way-binding.
   ConvergenceInputElementBinder.bindTextInput(textArea, realTimeString);
 }</code></pre>
-      <p>We use the ConvergenceInputElementBinder to create a two-way binding between the textArea element and the string element within the Convergence model. And that’s it folks.
+      <p>We use the ConvergenceInputElementBinder to create a two-way binding between the textArea element and the string element within the Convergence model. And that’s it folks! 
       </p>
       <p>
         <a href="https://github.com/convergencelabs/model-getting-started/">See Here</a> for the complete example source code.
