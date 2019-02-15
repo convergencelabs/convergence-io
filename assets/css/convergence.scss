@@ -13,6 +13,7 @@
 @import "faq";
 @import "learn";
 @import "support";
+@import "forms.scss";
 
 /* ==========================================================================
 Media Queries
@@ -20,6 +21,11 @@ Media Queries
 
 @media only screen and (max-width: 1200px) {
   .nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-collapse .navbar-nav > li > a.btn {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -35,7 +41,7 @@ Media Queries
   .navbar-collapse .navbar-nav > li > a.btn {
     margin-left: 10px;
     margin-right: 10px;
-    width: 80px;
+    width: 110px;
     padding-left: 0;
     padding-right: 0;
   }
