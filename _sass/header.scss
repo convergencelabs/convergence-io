@@ -90,6 +90,11 @@
 }
 
 .navbar-collapse {
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+
   .navbar-nav > li > a.btn {
     color: white;
     padding: 4px 20px;
@@ -113,6 +118,10 @@
 .scroll-fixed-navbar .navbar-nav > li.active > a,
 .scroll-fixed-navbar .navbar-nav > li.active > a:hover {
   color: #00a8d6;
+}
+
+.scroll-fixed-navbar .navbar-collapse {
+  background-color: #fff;
 }
 
 .navbar-toggle {
