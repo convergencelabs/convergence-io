@@ -1,6 +1,6 @@
-- title: Getting Started
+- title: Quickstart
   icon: /assets/img/learn-icons/getting-started.png
-  link: /getting-started/
+  link: /quickstart/
   content: Have a Convergence account? Build a simple app quickly with this guide and the accompanying GitHub repository.
   button: Get Started
 
