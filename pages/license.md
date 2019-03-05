@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: License:&nbsp;Development Edition
-permalink: /license/development-edition
+permalink: /license/development-edition/
 ---
 
 ## Convergence Development Edition License Agreement
