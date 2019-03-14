@@ -7,7 +7,7 @@ layout: page
   <div class="row">
     <div class="col-lg-12">
       <div class="headline">
-        <p>Get started with your first collaborative application.</p>
+        <p>Get started with your first collaborative application in less than five minutes.</p>
       </div>
     </div>
   </div>
@@ -16,12 +16,15 @@ layout: page
   <div class="row">
     <div class="col-md-4 col-sm-12 alt-band-title"><h2>Get Convergence</h2></div>
     <div class="col-md-8 col-sm-12 alt-band-content">
-      <p><em>We're in the process of getting the Convergence server images published to <a href="https://hub.docker.com/u/convergencelabs">Docker Hub</a>.  In the meantime, fill out <a href="/start/">this form</a> and we'll let you know when they're ready!</em>
+      <p>To download and run the Convergence server, you'll need to have <a href="https://www.docker.com/get-started">Docker</a> installed.</p>  
+      <p>We provide a <a href="https://hub.docker.com/u/convergencelabs"></a>docker image</a> free of charge for development use.  You can pull and run it with:</p>
+      <p><pre><code class="bash">docker run -p "8000:80" --name convergence convergencelabs/convergence-de</code></pre></p>
+      <p>The <code>-p "8000:80"</code> option binds your computer's port 8000 to the container's port 80.  You can alternatively choose to use a different port on your host machine, with e.g. <code>-p "3000:80"</code></p>
       </p>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4 col-sm-12 alt-band-title"><h2>Get the Code</h2></div>
+    <div class="col-md-4 col-sm-12 alt-band-title"><h2>Get sample code</h2></div>
     <div class="col-md-8 col-sm-12 alt-band-content">
       <p>To get the code, clone or fork the <a href="https://github.com/convergencelabs/model-getting-started">Getting
         Started Repository</a> from GitHub:
@@ -29,7 +32,7 @@ layout: page
       <p><pre><code class="bash">git clone https://github.com/convergencelabs/model-getting-started.git</code></pre></p>
       <p><em>Prefer a more hands-on approach? Follow our more in-depth <a href="/tutorial/">tutorial here</a></em>.</p>
       <p>Then, configure the application to connect to <em>your</em> domain using the user you just created. Copy <code>config.example.js</code>
-        to <code>config.js</code> and edit the <code>DOMAIN_URL</code> value to what you saw in the Administration UI in the previous step.
+        to <code>config.js</code> (and if you changed the port above, update the <code>DOMAIN_URL</code> accordingly).
       </p>
     </div>
   </div>
@@ -39,21 +42,11 @@ layout: page
       <p>Simply open <code>index.html</code> in your web browser to run the application. Open it a second time in
         another web browser and type in the textarea to see your changes propagated in real time!
       </p>
-      <p><em>Bonus: Back in the Administration console, click "Models" in the sidebar of the domain area, and click into the "getting-started" model. This is a real-time view of the contents of the model.  The data there will update immediately as you type in the textarea for easy, visual debugging.</em></p>
+      <p><em>Bonus: Go to <a href="http://localhost:8000/console/domain/convergence/default/models/getting-started" target="_blank">http://localhost:8000/console/domain/convergence/default/models/getting-started</a> (or whatever port you defined before). You should see a login dialog (use the credentials <code>admin/password</code>). In the model editor, notice how the value of the <code>text</code> node changes as you type in the textarea in the app.  You can even click the edit button and edit the value directly!</em></p>
       <p>Want more? Check out the <a href="https://github.com/convergencelabs/examples">examples repository</a> in
-        GitHub demonstrating activities, chat, and more.
+        GitHub demonstrating integrations with numerous open-source UI components and much more!
       </p>
-    </div>
-  </div>
-  <div class="row footnotes">
-    <div class="col-md-12 col-sm-12 alt-band-title">
-      <ol>
-        <li id="footnote-1">Domains are organizational entities: you can think of them as projects, different
-          environments (such as Prod or Staging), or some combination of both. Domains are self-encapsulated,
-          configurable, and contain their own data and users. <a
-            href="https://docs.convergence.io/guide/getting-started.html">See here</a> for more information.
-        </li>
-      </ol>
+      <p>For product updates and a dedicated support channel, fill out <a href="/start/">this form</a> and we'll keep you in the loop.</em>
     </div>
   </div>
 </div>
