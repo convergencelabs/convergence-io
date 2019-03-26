@@ -19,7 +19,7 @@ layout: page
       <p>
         We provide a Javascript API to help you build realtime applications. So what’s the simplest collaborative web
         application that you can think of? How about a realtime textarea? Two people can go to the same URL and use the
-        same <strong>textarea</strong> at once. Just create the element, connect to convergence, and bind to the model, we take care of
+        same <strong>textarea</strong> at once. Just create the element, connect to Convergence, and bind to the model: we take care of
         all the events and data synchronization. Easy peasy.
       </p>
       <p>
@@ -28,8 +28,9 @@ layout: page
       </p>
       <pre class="codeblock"><code>&lt;html&gt;
   &lt;head>
-    &lt;script src="https://cdn.convergence.io/latest/convergence-all.js">&lt;/script>
-    &lt;script src="https://cdn.convergence.io/utils/input-element-bindings/latest/convergence-input-element-bindings.min.js">&lt;/script>
+    &lt;script src="http://localhost:8000/client/rxjs.umd.min.js">&lt;/script>
+    &lt;script src="http://localhost:8000/client/convergence.js">&lt;/script>
+    &lt;script src="https://cdn.jsdelivr.net/npm/@convergence/input-element-bindings@0.3.4/browser/convergence-input-element-bindings.min.js">&lt;/script>
   &lt;/head>
   &lt;body>
    &lt;h2>A Collaborative Text Area&lt;/h2>
@@ -46,9 +47,9 @@ layout: page
     <div class="col-md-4 col-sm-12 alt-band-title"><h2>Connect</h2></div>
     <div class="col-md-8 col-sm-12 alt-band-content">
       <p>
-        With Convergence, a ‘Domain’ encapsulates a set of data, users, messages, and other items. You can create as many domains as you want, perhaps representing projects, apps, or different environments (e.g. Staging). Thus, we first have to connect to a domain before doing anything else. You simply need to replace &lt;username&gt; and &lt;domainId&gt; with your Convergence username and the domainId of the domain you want to connect to.
+        In Convergence, a ‘Domain’ encapsulates a set of data, users, messages, and other items. You can create as many domains as you want, perhaps representing projects, apps, or different environments (e.g. Staging). Thus, we first have to connect to a domain before doing anything else. 
       </p>
-      <pre class="codeblock"><code>var domainUrl = "https://api.convergence.io/realtime/domain/&lt;username&gt;/&lt;domain-id&gt;";
+      <pre class="codeblock"><code>var domainUrl = "http://localhost:8000/api/realtime/convergence/default";
 Convergence.connectAnonymously(domainUrl)
   .then(initApp)
   .catch(function(error) {
