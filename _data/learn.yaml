@@ -1,19 +1,19 @@
 - title: Quickstart
   icon: /assets/img/learn-icons/getting-started.png
   link: /quickstart/
-  content: Have a Convergence account? Build a simple app quickly with this guide and the accompanying GitHub repository.
+  content: Build a simple real-time collaborative &lt;textarea&gt; quickly with this guide and the accompanying GitHub repository.
   button: Get Started
 
 - title: 10-Minute Tutorial
   icon: /assets/img/learn-icons/tutorial.png
   link: /tutorial/
-  content: Get a glimpse of the platform’s power. See how easy it is to build a collaborative HTML &lt;textarea&gt; with our RealTimeModel API.
+  content: Like the quickstart, but with in-line code explanations the whole way through.
   button: View Tutorial
 
 - title: Examples
   icon: /assets/img/learn-icons/examples.png
   link: https://examples.convergence.io
-  content: To get a sense for the collaborative features, all our examples are best viewed simultaneously in two browser windows. Play around with one and see the realtime updates in the other.
+  content: A large collection of real-time collaboration examples, from rich text to HTML forms to code editors and more.
   button: View Examples
 
 - title: Developer Guide

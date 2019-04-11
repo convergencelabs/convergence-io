@@ -1,19 +1,39 @@
 .learn {
-  max-width: 1000px;
   margin: auto;
 
   .learn-box {
     border: 1px solid #ddd;
-    padding: 50px;
+    padding: 30px;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
 
     img {
-      width: 150px !important;
-      margin: 0 auto 20px 0;
+      max-width: 150px;
+      padding-right: 30px;
     }
 
     a.btn {
       margin-top: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .learn {
+    .learn-box {
+      display: block;
+      padding: 5px 5px 15px;
+      text-align: center;
+
+      img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 50px;
+        padding: 0;
+      }
     }
   }
 }
