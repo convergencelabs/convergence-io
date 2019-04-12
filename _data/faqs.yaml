@@ -1,33 +1,30 @@
 - title: About Convergence
   questions:
-    - q: Why did we build Convergence?
-      a: Because we think everyone should be able to build highly collaborative apps for their users without having to be experts in  distributed concurrency control algorithms or having to build chat, presence, users, security, and other functionality from scratch.
-
+    - q: Why Convergence?
+      a: We believe that highly collaborative real-time applications are the future. There are vanishingly few good examples out there, and we'd like to push the state of the art forward.  It's still much too hard to build these types of apps, and we believe that you shouldn't have to be an expert in distributed concurrency control algorithms to do so.
     - q: When will Convergence be available?
-      a: We have been working on Convergence for almost two years now. We want to ensure that the product is easy to use and rock solid before launching. We are currently executing a private beta and have several participants, several of whom are going live shortly. Within the next few months we anticipate launching a public beta program, followed by a general availability. We will keep you posted.
-
-    - q: How can I get approved for the private beta?
-      a: We are looking for developers who are serious about building an application. While we would like to support everyone, we have gotten a lot of interest and are not approving people that just want to "play" with the service. If you have an actual application in mind that Convergence could help with, please tell us about it when you request an invite.
-
+      a: It's available now!  We offer the <a href="https://hub.docker.com/r/convergencelabs/convergence-de">Convergence Development Edition</a> for trial use, and have a few customers already in production.  To be notified of product updates, <a href="https://www.getdrip.com/forms/62786386/submissions/new">go here</a>.
+    - q: What's your pricing model?
+      a: We offer annual licenses anchored on the average number of monthly collaborative sessions.  Licenses can range from $500 / year to $50k and up for 1M total monthly sessions.  All tiers (outside of <em>basic startup</em>) include dedicated support from Convergence Labs. <a href="/contact-sales/">Click here</a> to get in touch with our sales team and figure out a price that works for everyone.
 
 - title: Developing with Convergence
   questions:
     - q: What languages are supported?
-      a: Presently we are launching with support for <strong>JavaScript</strong> and <strong>TypeScript</strong> along with any other interoperable languages. In the near term we also anticipate a Java / Scala client as well.
+      a: We support <strong>JavaScript</strong> and <strong>TypeScript</strong> along with any other interoperable languages. In the near term we also anticipate a Java / Scala client as well.
 
     - q: Is the API stable?
-      a: Not quite, but it is getting there. We will be updating our documentation to identify areas of the API that are still under development and may change.
+      a: Not quite, but it is close.  We anticipate releasing version 1.0 at the end of Q2 2019, after we which we will follow standard semantic versioning techniques. <a href="https://www.getdrip.com/forms/62786386/submissions/new">Go here</a> to be notified when we do releases.
 
     - q: Can I request a feature?
       a: Absolutely! The best option is to create a new post on the <a href="https://forum.convergence.io">Convergence community forum</a>.
 
     - q: Can I install Convergence on my own infrastructure?
-      a: Yes, we provide licenses and dedicated support for those with on-premise needs. Please <a href="mailto:contact@convergence.io">contact us</a> for details.
+      a: Yes, in fact, as of early 2019 we no longer offer a cloud-based production instance of Convergence at all! We can help you get Convergence set up in your own environment. 
 
 - title: Convergence Labs
   questions:
     - q: Who is Convergence Labs?
-      a: Convergence Labs is the company that makes the Convergence Service. In addition to building Convergence (the product), Convergence Labs are experts in building real time collaborative end user applications. We help customers build highly effective collaborative applications.
+      a: Convergence Labs is the <a href="https://convergencelabs.com/blog/">thought leader</a> in real-time collaborative software.  Besides offering the Convergence Collaboration Engine, we offer custom development services.  <a href="https://convergencelabs.com/contact/">Get in touch</a> if you need help building your own real-time collaborative app.
 
     - q: Do you always use Convergence when building an app?
-      a: We think Convergence is a great choice for many applications, but some times the customer has a particular tech stack in mind. Our core competency at Convergence Labs is industry-leading domain knowledge and expertise in building collaborative applications.
+      a: We think Convergence is a great choice for many applications, but sometimes our customers already have a particular tech stack in mind. Our core competency at Convergence Labs is industry-leading domain knowledge and expertise in building collaborative applications, so we simplify identify the right tool for the job, design the appropriate systems and go off and build them.
