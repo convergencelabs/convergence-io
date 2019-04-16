@@ -10,76 +10,36 @@ layout: page
 
     <p>Fill out your information, and we'll send you a link to download Convergence as well as a complete guide to getting started.</p>
     
-    <form method="POST" action="https://convergencelabs.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form  _dark" novalidate>
-      <input type="hidden" name="u" value="1" />
-      <input type="hidden" name="f" value="1" />
-      <input type="hidden" name="s" />
-      <input type="hidden" name="c" value="0" />
-      <input type="hidden" name="m" value="0" />
-      <input type="hidden" name="act" value="sub" />
-      <input type="hidden" name="v" value="2" />
-      <div class="_form-content">
-        <div class="_form_element _x21505102 _full_width " >
-          <label class="_form-label">
-            Email*
-          </label>
-          <div class="_field-wrapper">
-            <input type="text" name="email" placeholder="Your company email" required/>
-          </div>
-        </div>
-        <div class="_form_element _x99986686 _full_width " >
-          <label class="_form-label">
-            First name*
-          </label>
-          <div class="_field-wrapper">
-            <input type="text" name="firstname" placeholder="" required/>
-          </div>
-        </div>
-        <div class="_form_element _x25201842 _full_width " >
-          <label class="_form-label">
-            Last name
-          </label>
-          <div class="_field-wrapper">
-            <input type="text" name="lastname" placeholder="" />
-          </div>
-        </div>
-        <div class="_form_element _field12 _full_width " >
-          <label class="_form-label">
-            Company
-          </label>
-          <div class="_field-wrapper">
-            <input type="text" name="field[12]" value="" placeholder="" />
-          </div>
-        </div>
-        <div class="_form_element _field2 _full_width " >
-          <label class="_form-label">
-            Title
-          </label>
-          <div class="_field-wrapper">
-            <input type="text" name="field[2]" value="" placeholder="" />
-          </div>
-        </div>
-        <div class="_form_element _x44413364 _full_width " >
-          <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go">
-          </div>
-        </div>
-        <div class="_button-wrapper _full_width">
-          <button id="_form_1_submit" class="_submit btn btn-primary" type="submit">
-            Get download link
-          </button>
-        </div>
-        <div class="_clear-element">
-        </div>
+    <form action="https://www.getdrip.com/forms/566007094/submissions" method="post" data-drip-embedded-form="566007094" class="_inline-form">
+      <div class="_form_element">
+        <label for="drip-email">Email*</label>
+        <input type="email" id="drip-email" name="fields[email]" value="" required/>
       </div>
-      <div class="_form-thank-you" style="display:none;">
+      <div class="_form_element">
+        <label for="drip-firstName">First Name*</label>
+        <input type="text" id="drip-firstName" name="fields[firstName]" value="" required/>
+      </div>
+      <div class="_form_element">
+        <label for="drip-lastName">Last Name</label>
+        <input type="text" id="drip-lastName" name="fields[lastName]" value="" />
+      </div>
+      <div class="_form_element">
+        <label for="drip-Company">Company</label>
+        <input type="text" id="drip-Company" name="fields[Company]" value="" />
+      </div>
+      <div class="_form_element">
+        <label for="drip-Title">Title</label>
+        <input type="text" id="drip-Title" name="fields[Title]" value="" />
+      </div>
+      <div style="display: none;" aria-hidden="true">
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="false" value="" />
+      </div>
+      <div class="g-recaptcha _form_element" data-sitekey="6LfbmJ4UAAAAABSZjPXODVYMPCpbFj95Gj-X2XtQ"></div>
+      <div class="_button-wrapper">
+        <input type="submit" value="Get Download Link" data-drip-attribute="sign-up-button" class="_submit btn btn-primary" />
       </div>
     </form>
-    <script type="text/javascript">
-      window.cfields = {"12":"company","2":"title"};
-      $(document).ready(function() {
-        initAcForm('1');
-      });
-    </script>
   </div>
   <div class="start">    
     <p>Alternatively, we provide a <a href="/quickstart/">self-serve option</a> to get started. Simply spin up the Convergence Server docker container in your own environment, and point our Hello World example repository to it.</p>

@@ -29,6 +29,8 @@
   <script src="/assets/lib/modernizr.min.js" type="text/javascript"></script>
   <script src="/assets/lib/highlightjs/highlight.min.js"></script>
 
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
   <!-- Facebook Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -52,34 +54,21 @@
   <script src="https://www.google-analytics.com/analytics.js"></script>
   <script src="/assets/lib/ga-auto.min.js"></script>
 
+  <!-- Drip -->
   <script type="text/javascript">
-    // Set to false if opt-in required
-    var trackByDefault = true;
-    
-    function acEnableTracking() {
-      var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
-      document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
-      acTrackVisit();
-    }
-    
-    function acTrackVisit() {
-      var trackcmp_email = '';
-      var trackcmp = document.createElement("script");
-      trackcmp.async = true;
-      trackcmp.type = 'text/javascript';
-      trackcmp.src = '//trackcmp.net/visit?actid=649515705&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
-      var trackcmp_s = document.getElementsByTagName("script");
-      if (trackcmp_s.length) {
-        trackcmp_s[0].parentNode.appendChild(trackcmp);
-      } else {
-        var trackcmp_h = document.getElementsByTagName("head");
-        trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
-      }
-    }
-    
-    if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
-      acEnableTracking();
-    }
+    var _dcq = _dcq || [];
+    var _dcs = _dcs || {};
+    _dcs.account = '9336749';
+
+    (function() {
+      var dc = document.createElement('script');
+      dc.type = 'text/javascript'; dc.async = true;
+      dc.src = '//tag.getdrip.com/9336749.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(dc, s);
+    })();
   </script>
+  <!-- end Drip -->
+
 </head>
 <body data-spy="scroll" data-target=".navigation">

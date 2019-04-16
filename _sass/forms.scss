@@ -1,3 +1,8 @@
+.inline-form {
+  width: 500px;
+}
+
+
 /* from ActiveCampaign */
 ._inline-form {
   font-size: 14px;
@@ -36,6 +41,7 @@
 }
 
 ._inline-form input[type="text"],
+._inline-form input[type="email"],
 ._inline-form input[type="date"],
 ._inline-form textarea {
   padding: 6px;
@@ -150,6 +156,7 @@
 }
 
 ._inline-form ._form_element input[type="text"],
+._inline-form ._form_element input[type="email"],
 ._inline-form ._form_element input[type="date"],
 ._inline-form ._form_element select,
 ._inline-form ._form_element textarea:not(.g-recaptcha-response) {
