@@ -36,7 +36,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   gaAll('require', 'eventTracker');
   gaAll('require', 'linker');
   gaAll('require', 'maxScrollTracker', {
-    maxScrollMetricIndex: 3
+    maxScrollMetricIndex: 1
   });
   gaAll('require', 'outboundLinkTracker', {
     events: ['click', 'auxclick', 'contextmenu'],
@@ -44,7 +44,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   });
   gaAll('require', 'pageVisibilityTracker', {
     sendInitialPageview: true,
-    visibleMetricIndex: 1,
+    visibleMetricIndex: 3,
     pageLoadsMetricIndex: 2
   });
   gaAll('require', 'cleanUrlTracker', {
