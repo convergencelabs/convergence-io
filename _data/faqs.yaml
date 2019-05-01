@@ -5,7 +5,7 @@
     - q: When will Convergence be available?
       a: It's available now!  We offer the <a href="https://hub.docker.com/r/convergencelabs/convergence-de">Convergence Development Edition</a> for trial use, and have a few customers already in production.  To be notified of product updates, <a href="https://www.getdrip.com/forms/62786386/submissions/new">go here</a>.
     - q: What's your pricing model?
-      a: We offer annual licenses anchored on the average number of monthly collaborative sessions.  Licenses can range from $500 / year to $50k and up for 1M total monthly sessions.  All tiers (outside of <em>basic startup</em>) include dedicated support from Convergence Labs. <a href="/contact-sales/">Click here</a> to get in touch with our sales team and figure out a price that works for everyone.
+      a: We offer annual licenses anchored on the average number of monthly collaborative sessions.  Licenses can range from $1,000 / year to $50k and up for 1M total monthly sessions.  All tiers (outside of <em>basic startup</em>) include dedicated support from Convergence Labs. <a href="/contact-sales/">Click here</a> to get in touch with our sales team and figure out a price that works for everyone.
 
 - title: Developing with Convergence
   questions:
