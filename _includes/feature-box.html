@@ -1,9 +1,10 @@
 <div class="feature-highlight index-{{include.id}}"
-     onclick="selectFeature('{{include.id}}', '{{include.section}}');"
-     ga-on="click"
-     ga-event-category="Internal click"
-     ga-event-action="Homepage feature"
-     ga-event-label="Collaboration Awareness">
+    data-feature="{{include.slug}}"
+    onclick="Convergence.selectFeature('{{include.id}}', '{{include.section}}');"
+    ga-on="click"
+    ga-event-category="Internal click"
+    ga-event-action="Homepage feature"
+    ga-event-label="{{include.title}}">
   <div class="feature">
     <img class="svg-icon" src="{{ include.iconUrl }}" alt="awareness">
     <h3>{{ include.title }}</h3>

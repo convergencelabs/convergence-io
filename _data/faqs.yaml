@@ -13,7 +13,7 @@
       a: We support <strong>JavaScript</strong> and <strong>TypeScript</strong> along with any other interoperable languages. In the near term we also anticipate a Java / Scala client as well.
 
     - q: Is the API stable?
-      a: Not quite, but it is close.  We anticipate releasing version 1.0 at the end of Q2 2019, after we which we will follow standard semantic versioning techniques. <a href="https://www.getdrip.com/forms/62786386/submissions/new">Go here</a> to be notified when we do releases.
+      a: We anticipate releasing version 1.0 at the end of Q2 2019, after we which we will follow standard semantic versioning techniques. <a href="https://www.getdrip.com/forms/62786386/submissions/new">Go here</a> to be notified when we do releases.
 
     - q: Can I request a feature?
       a: Absolutely! The best option is to create a new post on the <a href="https://forum.convergence.io">Convergence community forum</a>.

@@ -339,10 +339,11 @@ Headline
     font-size: 16px;
     color: #2b2b2b;
 
-    &.narrative {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  }
+
+  .narrative {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
