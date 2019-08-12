@@ -6,7 +6,7 @@
       a: It's available now!  We offer the <a href="https://hub.docker.com/r/convergencelabs/convergence-de">Convergence Development Edition</a> for trial use, and have a few customers already in production.  To be notified of product updates, <a href="https://www.getdrip.com/forms/62786386/submissions/new">go here</a>.
     - q: What's your pricing model?
       a: We offer annual licenses anchored on the average number of monthly collaborative sessions.  Licenses can range from $1,000 / year to $50k and up for 1M total monthly sessions.  All tiers (outside of <em>basic startup</em>) include dedicated support from Convergence Labs. <a href="/contact-sales/">Click here</a> to get in touch with our sales team and figure out a price that works for everyone.
-    - q: Why not open source? Vendor lock-in / evil corporations, ahh!
+    - q: Why not open source?
       a: As senior software engineers overselves, we are intimately familiar with the risks and rewards of relying on both open-source and proprietary software.  Each has its risks (we wrote a bit about them <a href="https://convergencelabs.com/realtime-collaboration-technology-guide/#commercial-vs-open-source">here</a>). Code access can be provided alongside the binary software under certain license arrangements.
 
 - title: Developing with Convergence
