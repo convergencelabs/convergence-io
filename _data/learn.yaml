@@ -16,6 +16,18 @@
   content: A large collection of real-time collaboration examples, from rich text to HTML forms to code editors and more.
   button: View Examples
 
+- title: Demos
+  icon: /assets/img/features/realtime-admin.png
+  link: https://convergence.io/demos
+  content: We put together a few larger applications that include all the functionality the Convergence in one place. 
+  button: View Demos
+
+- title: Architecture Overview
+  icon: /assets/img/features/realtime-data.png
+  link: https://docs.convergence.io/guide/architecture-overview.html
+  content: What are some ways you could integrate real-time collaboration into your application with Convergence? We attempt to answer that here.
+  button: Explore Architecture
+
 - title: Developer Guide
   icon: /assets/img/learn-icons/guide.png
   link: https://docs.convergence.io/guide/
