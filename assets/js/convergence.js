@@ -1,4 +1,4 @@
-var Convergence = (function(window, hljs) {
+var Convergence = (function(window, hljs, Vue) {
   $(window).scroll(handleScroll);
 
   function handleScroll() {
@@ -75,11 +75,15 @@ var Convergence = (function(window, hljs) {
     }
   }
 
+  new Vue({
+    el: '.footer-top'
+  });
+
   return {
     initAccordion: initAccordion,
     selectFeature: selectFeature,
     scrollToHomepageFeature: scrollToHomepageFeature
   };
-}(window, window.hljs));
+}(window, window.hljs, window.Vue));
 
 

@@ -52,6 +52,10 @@ Footer
     margin: 0 5px;
   }
 
+  .intro a {
+    color: #00a8d6;
+  }
+
   .contact-list li {
     color: #ADADAD;
     margin-bottom: 5px;
@@ -85,7 +89,8 @@ Footer
 /* ==========================================================================
 Social Links
  ========================================================================== */
-.social {
+ul.social {
+  margin-top: 1em;
 }
 
 .social li {
