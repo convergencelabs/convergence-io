@@ -1,0 +1,17 @@
+#small-banner {
+  div.page-header-bg {
+    height: 200px;
+    background: url(/assets/img/page-header.jpg);
+  }
+
+  .page-title {
+    position: absolute;
+    top: 120px;
+
+    color: white;
+  }
+}
+
+#content {
+  padding: 30px;
+}

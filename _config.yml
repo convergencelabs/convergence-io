@@ -27,6 +27,13 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-assets
+
+keep_files:
+  - assets/fonts
+
+sass:
+  sass_dir: assets/css
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
