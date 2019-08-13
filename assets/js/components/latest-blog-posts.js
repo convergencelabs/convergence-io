@@ -4,7 +4,8 @@ Vue.component('latest-blog-posts', {
   },
   data: function() {
     return {
-      posts: []
+      posts: [],
+      error: false
     }
   },
   computed: {
@@ -16,10 +17,13 @@ Vue.component('latest-blog-posts', {
     }
   },
   template: '' + 
-    '<div v-if="posts.length > 0" class="blog-posts">' +
+    '<div class="blog-posts">' +
     '  <div class="post-content" v-for="post in posts">' +
     '    <span class="post-date">{{ post.date }}</span>: ' +
     '    <a :href="post.href">{{ post.title }}</a>' + 
+    '  </div>' +
+    '  <div class="error-loading" v-if="error">' + 
+    '    <a href="https://convergencelabs.com/blog">The Convergence Labs Blog</a>' + 
     '  </div>' +
     '</div>',
   mounted: function() {
@@ -45,6 +49,9 @@ Vue.component('latest-blog-posts', {
 
           _thisComponent.posts.push(post);
         });
+      })
+      .catch(function() {
+        _thisComponent.error = true;
       });
   },
   methods: {

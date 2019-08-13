@@ -3,17 +3,24 @@ title: Frequently Asked Questions
 permalink: /faq/
 layout: page
 ---
-<div class="mw800">
-  <div class="headline">
-    <p>We get asked a lot of questions. You might find the answer to yours below!</p>
-  </div>
+<section>
+  <div class="container">
+    <div class="headline">
+      <p>We get asked a lot of questions. You might find the answer to yours below!</p>
+    </div>
 
-  <div class="faq-groups" id="faqs">
-  {% for group in site.data.faqs %}
-    {% include faq-group.html group=group %}
-  {% endfor %}
+    <div class="faq-groups" id="faqs">
+    {% for group in site.data.faqs %}
+      {% include faq-group.html group=group %}
+    {% endfor %}
+    </div>
+
+    <p class="not-found">
+      Didn't find what you were looking for? <a href="mailto:contact@convergencelabs.com">Contact us directly</a>!
+    </p>
   </div>
-</div>
+</section>
+
 <script>
   $(document).ready(function() {
     Convergence.initAccordion("faqs");

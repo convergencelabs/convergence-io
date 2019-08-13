@@ -128,14 +128,20 @@ Media Queries
   .banner-content h1 {
     font-size: 34px;
   }
+  .headline {
+    margin: 20px 0;
+  }
   .headline h1 {
     font-size: 30px;
   }
   .headline h2 {
     font-size: 28px;
   }
+  .headline p {
+    margin-bottom: 20px;
+  }
   .section {
-    padding: 50px 0;
+    padding: 20px 0;
   }
   .separator60 {
     margin: 30px 0;
@@ -165,8 +171,7 @@ Media Queries
     font-size: 36px;
   }
   #content { 
-    padding-right: 0;
-    padding-left: 0;
+    padding: 0;
   }
   .copyright {
     float: none;

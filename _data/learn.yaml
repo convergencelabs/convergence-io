@@ -18,7 +18,7 @@
 
 - title: Demos
   icon: /assets/img/features/realtime-admin.png
-  link: https://convergence.io/demos
+  link: /demos/
   content: We put together a few larger applications that include all the functionality of Convergence in one place. 
   button: View Demos
 
