@@ -29,9 +29,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-assets
 
-keep_files:
-  - assets/fonts
-
 sass:
   sass_dir: assets/css
 
