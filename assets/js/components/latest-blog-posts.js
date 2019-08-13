@@ -23,8 +23,8 @@ Vue.component('latest-blog-posts', {
     '  </div>' +
     '</div>',
   mounted: function() {
-    // var feedUrl = 'https://convergencelabs.com/feed.xml';
-    var feedUrl = 'http://localhost:8001/feed.xml';
+    var feedUrl = 'https://convergencelabs.com/feed.xml';
+    // var feedUrl = 'http://localhost:8001/feed.xml';
     var _thisComponent = this;
     fetch(feedUrl)
       .then(function(response) {

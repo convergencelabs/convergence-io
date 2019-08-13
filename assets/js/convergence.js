@@ -54,6 +54,11 @@ var Convergence = (function(window, hljs, Vue) {
         $(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
       }
       else {
+        if (window.ga) {
+          var label = $(this).find('.title-name').html();
+          window.ga('send', 'event', 'Internal click', 'FAQ item', label);
+        }
+        
         $(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
       }
     });

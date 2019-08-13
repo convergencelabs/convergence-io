@@ -51,6 +51,4 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     stripQuery: true,
     trailingSlash: 'remove'
   });
-
-  gaAll('linker:autoLink', ['admin.convergence.io']);
 }(window.ga));
