@@ -159,26 +159,48 @@ Logo
   font-weight: 700;
   padding: 0;
   margin-left: 0;
+
+  .open-source a {
+    color: #007bc3;
+  }
 }
 
 .logo {
   user-select: none;
 
-  img {
-    height: 45px;
-    display: inline;
+  a {
+    color: #007bc3;
   }
 
-  span {
-    font-family: "CenturyGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 300;
+  img {
+    height: 45px;
+    display: inline-block;
+  }
+
+  .text {
     position: relative;
     top: 4px;
     left: 4px;
-    color: #007bc3;
-    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+
+    .main {
+      font-family: "CenturyGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-bottom: 7px;
+    }
+
+    .open-source { 
+      font-family: 'Nothing You Could Do', cursive;
+      font-size: 14px;
+      a {
+        color: #fff;
+      }
+    }
   }
+
 }
 
 /* ==========================================================================
@@ -202,44 +224,60 @@ Banner
   clear: both;
   padding-top: 40px;
   text-align: center;
-}
 
-.banner-content h1 {
-  font-size: 60px;
-  color: #FFF;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
+  h1 {
+    font-size: 60px;
+    color: #FFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #FFF;
+    margin-bottom: 45px;
+    font-weight: normal;
+  }
 
-.banner-content h2 {
-  color: #FFF;
-  margin-bottom: 35px;
-}
+  h3 {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+  }
 
-.banner-content h3 {
-  color: #FFF;
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 32px;
-}
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto 100px auto;
+    max-width: 850px;
+    font-size: 20px;
+    line-height: 27px;
+  }
 
-.banner-content p {
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0 auto 100px auto;
-  max-width: 850px;
-  font-size: 20px;
-  line-height: 27px;
+  .open-source {
+    font-family: 'Nothing You Could Do', cursive;
+    color: #337AB7;
+    vertical-align: text-bottom;
+    margin-right: -7px;
+    position: relative;
+
+    .positioned {
+      position: absolute;
+      margin: -1.2em 0 0 -3em;
+      overflow: visible;
+      white-space: nowrap;
+    }
+  }
 }
 
 .banner-list {
   margin-bottom: 20px;
-}
 
-.banner-list li {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 5px;
-}
+  li {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
 
-.banner-list li i {
-  margin-right: 10px;
-  color: #08b4da;
+    i {
+      margin-right: 10px;
+      color: #08b4da;
+    }
+  }
 }

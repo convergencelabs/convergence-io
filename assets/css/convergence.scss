@@ -113,8 +113,38 @@ Media Queries
   iframe {
     max-height: 200px;
   }
-  .banner-content h1 {
-    font-size: 34px;
+  .logo {
+    .text {
+      .main {
+        font-size: 26px;
+      }
+      .open-source {
+        font-size: 12px;
+      }
+    }
+  }
+  .banner-content {
+    padding-top: 0;
+
+    h1 {
+      font-size: 44px;
+    }
+    h2 {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    h3 {
+      line-height: 2em;
+      margin-bottom: 2em;
+    }
+    .open-source {
+      vertical-align: baseline;
+
+      .positioned {
+        margin-top: -25px;
+        color: #08b4da;
+      }
+    }
   }
   .headline {
     margin: 20px 0;
@@ -173,7 +203,11 @@ Media Queries
 
 @media only screen and (max-width: 370px) {
   .navbar > .container .navbar-brand {
-    span { font-size: 24px;}
+    .text .main { 
+      font-size: 24px;
+      padding-bottom: 2px;
+    }
+
     img {
       height: 34px;
       margin: 12px 0 8px;
