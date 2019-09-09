@@ -3,7 +3,7 @@ title: Demos
 permalink: /demos/
 layout: page
 ---
-<section id="#demos">
+<section id="demos">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
@@ -17,8 +17,13 @@ layout: page
     </div>
   </div>
   <div class="container-fluid alt-bands">
-    <div class="row">
-      <div class="col-md-6 col-sm-12 alt-band-content">
+    <div class="row demo-content">
+      <div class="col-md-6 col-md-push-6 col-sm-12 alt-band-content">
+        <a href="https://demos.convergence.io/code-editor/">
+          <img src="/assets/img/demos/code-editor.jpg" alt="code-editor" width="700" style="max-width: 100%;">
+        </a>
+      </div>
+      <div class="col-md-6 col-md-pull-6 col-sm-12 alt-band-content">
         <h2>Collaborative <span class="blue">Code Editor</span></h2>
         <p>We connected the <a href="https://ace.c9.io">Ace code editor</a> to the Convergence Javascript client to
           build
@@ -29,14 +34,10 @@ layout: page
           such as file history and playback.
         </p>
         <a class="btn btn-primary" href="https://demos.convergence.io/code-editor/">View Demo</a>
-      </div>
-      <div class="col-md-6 col-sm-12 alt-band-content">
-        <a href="https://demos.convergence.io/code-editor/">
-          <img src="/assets/img/demos/code-editor.jpg" alt="code-editor" width="700" style="max-width: 100%;">
-        </a>
+        <a class="btn btn-info" href="https://github.com/convergencelabs/code-editor-demo">Source Code</a>
       </div>
     </div>
-    <div class="row">
+    <div class="row demo-content">
       <div class="col-md-6 col-sm-12 alt-band-content">
         <a href="https://demos.convergence.io/code-editor/">
           <img src="/assets/img/demos/diagram-editor.jpg" alt="diagram-editor" width="700" style="max-width: 100%;">
@@ -48,23 +49,37 @@ layout: page
           real-time collaborative capabilities via the Convergence platform. See who is currently editing the diagram
           and view their mouse position, selections and viewport. Changes are propagated to all connected users in
           realtime.</p>
+        <p>Note that since this demo was built on top of a licensed version of Rappid, we can't offer the source code publicly. <a href="mailto:contact@convergencelabs.com">Get in touch with us</a> or the fine folks at <a href="https://www.client.io/#contact">client.io</a> for source code access.</p>
         <a class="btn btn-primary" href="https://demos.convergence.io/diagram-editor/">View Demo</a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 col-sm-12 alt-band-content">
+    <div class="row demo-content">
+      <div class="col-md-6 col-md-push-6 col-sm-12 alt-band-content text-center">
+        <a href="https://demos.convergence.io/todomvc/">
+          <img src="/assets/img/demos/todomvc.png" alt="diagram-editor">
+        </a>
+      </div>
+      <div class="col-md-6 col-md-pull-6 col-sm-12 alt-band-content">
         <h2>Collaborative <span class="blue">Todos</span></h2>
         <p>We implemented the classic <a href="http://todomvc.com/">TodoMVC</a> app using
-          Convergence as the backend. Your todos are collaboratively sync'ed across browsers. In
-          addition to the normal functionality in the TodoMVC app, you can drag and drop the
-          items to reprioritize them.
-        </p>
+          Convergence as the backend. Your todos are collaboratively sync'ed across browsers. In addition to the normal functionality in the TodoMVC app, you can drag and drop the items to reprioritize them.</p>
+        <p>Uses <a href="https://mobx.js.org/">MobX</a> for client-side state management.</p>
         <a class="btn btn-primary" href="https://demos.convergence.io/todomvc/">View Demo</a>
+        <a class="btn btn-info" href="https://github.com/convergencelabs/todomvc">Source Code</a>
       </div>
-      <div class="col-md-6 col-sm-12 alt-band-content" style="text-align: center">
+    </div>
+    <div class="row demo-content">
+      <div class="col-md-6 col-sm-12 alt-band-content text-center">
         <a href="https://demos.convergence.io/todomvc/">
-          <img src="/assets/img/demos/todomvc.png" alt="diagram-editor" style="max-width: 100%;">
+          <img src="/assets/img/demos/mxgraph.jpg" alt="mxgraph-demo">
         </a>
+      </div>
+      <div class="col-md-6 col-sm-12 alt-band-content">
+        <h2><span class="blue">Collaborative Diagramming</span> with mxGraph</h2>
+        <p>We built another full-featured diagram editor, this time using the excellent open-source mxGraph library.  All edits are propagated to all connected users immediately.  See who is connected to the diagram and each participant's viewport. There is also integrated chat.
+        </p>
+        <a class="btn btn-primary" href="https://demos.convergence.io/mxgraph/">View Demo</a>
+        <a class="btn btn-info" href="https://github.com/convergencelabs/mxgraph-demo">Source Code</a>
       </div>
     </div>
   </div>
