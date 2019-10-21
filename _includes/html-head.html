@@ -64,5 +64,11 @@
   </script>
   <!-- end Drip -->
 
+  {% if page.custom_js_async %}
+    {% for js_src in page.custom_js_async %}
+  <script src="{{ js_src }}" async></script>
+    {% endfor %}
+  {% endif %}
+
 </head>
 <body data-spy="scroll" data-target=".navigation" id="app">
