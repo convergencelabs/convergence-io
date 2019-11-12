@@ -2,6 +2,9 @@
 title: The Real-Time Collaboration Engine
 layout: default
 permalink: /
+custom_js_async:
+- https://fast.wistia.com/embed/medias/7bpklq8xff.jsonp
+- https://fast.wistia.com/assets/external/E-v1.js"
 ---
 <!-- Banner -->
 <div id="banner" class="bg-blur">
@@ -10,13 +13,13 @@ permalink: /
       <div class="row">
         <!-- Start Header Text -->
         <div class="col-md-12 col-sm-12">
-          <h1>REAL TIME IN NO TIME:</h1>
-          <h2>Building collaborative apps just got easy</h2>
-          <h3>Introducing the revolutionary engine for building realtime collaborative applications.</h3>
-          <p>Users wants real-time collaboration in the apps they use, but few companies provide it.  It’s been too hard.  We’re here to change that.  With Convergence, what used to take months to build now takes days.  We've solved the hard problems -- now what will you build?</p>
-          <a class="btn btn-primary" href="/start/">Get started <i class="fa fa-arrow-right"></i></a>
+          <h1>The <a href="//github.com/convergencelabs/">open source</a> engine for real-time collaboration</h1>
+          <p>
+            <span class="wistia_embed wistia_async_7bpklq8xff popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:84px;position:relative;width:150px">&nbsp;</span>
+          </p>
+          <a class="btn btn-primary" href="/quickstart/">Get started <i class="fa fa-arrow-right"></i></a>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
 </div>
@@ -26,11 +29,9 @@ permalink: /
   <div class="container headline">
     <h2><span class="blue">Why</span> would I need Convergence?</h2>
     <div class="narrative">
-      <p>There are plenty of software solutions out there that help sync data in real-time between users.  But what happens when you want to give your users the ability to edit the same document <em>simultaneously?</em> They end up overwriting each other's data.  So you end up either locking the document or abandoning the idea altogether.</p>
-      <p>To build <a href="https://convergencelabs.com/blog/2017/09/what-makes-for-a-great-collaborative-editing-experience/">real-time collaboration that your users will love</a>, users need to know <a href="/#feature-2-1">when and where their collaborators are working</a>.  So you need to not just handle potential editing conflicts, but proactively prevent them! Convergence is the only solution that offers <em>everything you need to build world-class real-time collaborative applications</em> in days, not months.</p>
-    </div><!--
-    <p>Over several years implementing multi-user co-editing applications, we kept running into the same problems. Convergence represents the common code for all these applications.  It's been battle-tested in </p>   Data conflict resolution is <a href="https://en.wikipedia.org/wiki/Collaborative_real-time_editor">a fiendishly difficult problem</a> requiring deep knowledge of concurrency control algorithms. 
-    </p>-->
+      <p>There are plenty of software libraries out there that help sync data in real-time between users.  But what happens when you want to give your users the ability to edit the same document <em>simultaneously?</em> They end up overwriting each other's data.  So you end up either locking the document or abandoning the idea altogether.</p>
+      <p>To build <a href="https://convergencelabs.com/blog/2017/09/what-makes-for-a-great-collaborative-editing-experience/">real-time collaboration that your users will love</a>, users need to know <a href="/#feature-2-1">when and where their collaborators are working</a>.  So applications need to not just handle editing conflicts, but proactively prevent them! Convergence is the only solution that offers <em>everything you need to build world-class real-time collaborative applications</em> in days, not months.</p>
+    </div>
   </div>
 </section>
 
@@ -43,16 +44,17 @@ permalink: /
       </div>
       <div class="col-md-6">
         <div class="margintop">
-          <h2>Everything you need in one API</h2>
-          <p>Don't waste weeks trying to cobble together multiple technologies resulting in an unreliable, unusable end product.  Out of the box, Convergence provides:</p>
+          <h2>Everything you need for real-time collaboration</h2>
+          <p>Convergence combines an on-premise <a href="//github.com/convegergencelabs/convergence-server">server and database</a> with a <a href="//github.com/convegergencelabs/convergence-server">JavaScript API</a> to provide all the necessary functionality your app needs to provide a superlative real-time collaboration experience.</p>
           <ul class="green-arrow">
             <li>Fine-grained, live editing of shared data</li>
             <li>See who is online and what they are doing</li>
             <li>Shared cursors, pointers, and viewports</li>
-            <li>Flexible identity, authentication, and security</li>
+            <li>Flexible identity, authentication, and permissioning</li>
             <li>Coordinate through embedded messaging</li>
             <li>History and playback of editing sessions</li>
-            <li>Zero setup required with an easy to use API</li>
+            <li>Robust offline support</li>
+            <li>Commercial-friendly licensing</li> 
           </ul>
         </div>
       </div>
@@ -109,7 +111,7 @@ permalink: /
           <h3>Start <span class="blue">Coding</span></h3>
           <img src="/assets/img/getting-started/start-coding.jpg" alt="Start Coding">
           <div class="detail">Ready to start developing? Check out our getting started guide to get up and running in no time.</div>
-          <a class="btn white bg-primary text-center btn-border" href="/start">Start Coding</a>
+          <a class="btn white bg-primary text-center btn-border" href="/quickstart">Start Coding</a>
           <div class="clearfix"></div>
         </div>
       </div>
