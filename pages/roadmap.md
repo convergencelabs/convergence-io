@@ -11,12 +11,12 @@ This page outlines the high level feature Roadmap for the next several releases 
 ## v1.0.0-rc.4
   * **User API Keys**: Allows for programmatic access to the REST API without requiring a username and password.
   * **Automatic Reconnection**: The Convergence Client will automatically reconnect too the server when it gets disconnected.
-  * **Offline Support**: Support for editing data in an offline mode. 
+  * **Experimental Offline Support**: Support for editing data in an offline mode. 
 
 ## v1.0.0-rc.5
 
   * **Database Upgrade Support**: Automated upgrade of the backing database when Convergence is upgraded.
-  * **Simple Rich Text Support**: Basic rich text support for editors like Quill, Draft, etc.
+  * **Experimental Rich Text Support**: Basic rich text support for editors like Quill, Draft, etc.
 
 ## v1.0.0
 
@@ -27,8 +27,9 @@ This page outlines the high level feature Roadmap for the next several releases 
 
 ## v1.1.0
 
-  * **Complex Rich Text Support**: Complex rich text support for editors like CKEditor 5.
+  * **Stable Rich Text Support**: Complex rich text support for editors like CKEditor 5.
   * **Local Undo Support**: The ability to undo local actions, in the face of remote changes.
+  * **Stable Offline Support**: The ability to undo local actions, in the face of remote changes.
 
 ## Future Releases
   * **Database Abstraction Layer**: the ability to use other databases to back Convergence. Current thoughts include PostgreSQL and MongoDB.
