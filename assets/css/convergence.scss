@@ -3,6 +3,34 @@
 
 @import "theme/main.scss";
 
+.flex-grid {
+  display: flex;
+
+  .col {
+    flex: 1;
+    align-content: stretch;
+  }
+
+  .boxed {
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.flex-grid.halves {
+  justify-content: space-between;
+
+  .col {
+    flex: initial;
+    width: 48%;
+  }
+}
+
+.grid-page {
+  margin-top: 30px;
+}
+
 /* ==========================================================================
 Media Queries
  ========================================================================== */
@@ -47,6 +75,15 @@ Media Queries
 
 /* ------ Mobile Landscape Size to Tablet Portrait (devices and browsers) ------*/
 @media only screen and (max-width: 767px) {
+  .flex-grid {
+    display: block;
+  }
+  .flex-grid.halves {
+    .col {
+      width: 100%;
+    }
+  }
+
   .navbar-inverse {
     padding: 0;
   }
