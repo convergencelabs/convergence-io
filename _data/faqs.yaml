@@ -3,9 +3,6 @@
     - q: Why Convergence?
       a: We believe that highly collaborative real-time applications are the future. There are vanishingly few good examples out there, and we'd like to push the state of the art forward.  It's still much too hard to build these types of apps, and we believe that you shouldn't have to be an expert in distributed concurrency control algorithms to do so.
 
-    - q: When will Convergence be available?
-      a: It's available now!  We offer the <a href="https://hub.docker.com/r/convergencelabs/convergence-de">Convergence Development Edition</a> for trial use, and have a few customers already in production.  To be notified of product updates, <a href="https://www.getdrip.com/forms/62786386/submissions/new">go here</a>.
-
     - q: What does Convergence cost?
       a: Convergence is free and licensed under the GPL (server) and LGPL (client). With this license arrangement we aim to accommodate the vast majority of commercial and non-commercial uses while maintaining a strong core product. If you have any questions or are interested in a custom license, <a href="/contact-sales/">contact us</a>.
 
