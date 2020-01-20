@@ -1,0 +1,93 @@
+## COMMUNITY
+- title: Source Code Access
+  description: View all of the source code that makes up Convergence.  Submit pull requests to fix issues or add features.
+  community: true
+  standard: true
+  premium: true
+
+- title: Enterprise Docker Containers
+  description: Pull the enterprise containers right from Docker Hub for easy deployment.
+  community: true
+  standard: true
+  premium: true
+
+- title: Omnibus Docker Container
+  description: Pull the all-in-one omnibus container right from Docker Hub for easy deployment.
+  community: true
+  standard: true
+  premium: true
+
+- title: Developer Guide
+  description: Learn how to deploy and use convergence with our comprehensive Developer Guide.
+  community: true
+  standard: true
+  premium: true
+
+- title: Convergence Community Forum
+  description: Engage with the broader Convergence community to ask questions in the Convergence Community Forum.
+  community: true
+  standard: true
+  premium: true
+
+- title: Public Git Hub Issue Tracker
+  description: Report issues, request festures, and ask questions in the Public GitHub Issue tracker.
+  community: true
+  standard: true
+  premium: true
+
+- title: Public Slack Channels
+  description: Chat with the Convergence team and the broader community in the Convergence Public Slack.
+  community: true
+  standard: true
+  premium: true
+
+## STANDARD
+- title: Private Slack Channel
+  description: Get a private, dedicated slack channel to chat with the Convergence team.
+  community: false
+  standard: true
+  premium: true
+
+- title: 2 Business Day Issue Response
+  description: Get a priority response to issues posted to GitHub within 2 business days.
+  community: false
+  standard: true
+  premium: true
+
+- title: Hot Fix Releases
+  description: Get hot fixes to your issues in advance of the next release.
+  community: false
+  standard: true
+  premium: true
+
+- title: Prioritized Feature Requests
+  description: Priority will be given to your feature requests on our road map.
+  community: false
+  standard: true
+  premium: true
+
+
+## PREMIUM
+- title: Private Issue Tracker
+  description: Get your own private issue tracker to track your sensative issues.
+  community: false
+  standard: false
+  premium: true
+
+- title: 1 Business Day Issue Response
+  description: Get a priority response to issues posted to GitHub within 1 business day.
+  community: false
+  standard: false
+  premium: true
+
+- title: Direct Email Support
+  description: Get dedicated email communication to work with the Convergence team.
+  community: false
+  standard: false
+  premium: true
+
+- title: 5 Consulting Hours per Year
+  description: Get 5 hours of complimentary consulting to help design you app and integration Convergence.
+  community: false
+  standard: false
+  premium: true

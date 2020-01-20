@@ -1,32 +1,80 @@
 ---
-title: Support
+title: Support Subscriptions
 permalink: /support/
 layout: page
 ---
 
-<section class="grid-page">
+<section>
   <div class="container">
-    <div class="flex-grid halves">
-      <div class="col boxed">
-        <h3>Technical and Product Questions</h3>
-        <p>Questions about our API?  Not sure how Convergence could fit in to your existing architecture? Get help in our community forum.</p>
-        <a class="btn btn-primary" href="https://forum.convergence.io">Convergence Community Forum</a>
-      </div>
-      <div class="col boxed">
-        <h3>Dedicated support</h3>
-        <p><a href="//convergencelabs.com">Convergence Labs</a> offers paid, dedicated support for those interested. <a href="/contact-sales/">Contact us</a> to determine an appropriate plan for your installation.
-        </p>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="headline">
+          <p>For mission critical applications we recommend a commercial support subscription from Convergence Labs.</p>
+        </div>
       </div>
     </div>
-    <div class="flex-grid halves">
-      <div class="col boxed">
-        <h3>Contact Us</h3>
-        <p>Find a discrepancy in our docs? Website issue? We'd hugely appreciate a heads up: <a href="mailto:support@convergencelabs.com">support@convergencelabs.com</a></p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="support-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Community</th>
+              <th>Standard</th>
+              <th>Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for feature in site.data.feature-comparison %}
+            <tr>
+              <td>
+                <span>{{feature.title}}</span>
+                <span class="fa fa-info-circle icon-tooltip">
+                  <span class="tooltiptext">{{feature.description}}</span>
+                </span>
+              </td>
+              <td>{% if feature.community %}<span class="dot community"/>{% endif %}</td>
+              <td>{% if feature.standard %}<span class="dot standard"/>{% endif %}</td>
+              <td>{% if feature.premium %}<span class="dot premium"/>{% endif %}</td>
+            </tr>
+          {% endfor %}
+          <tr>
+            <td></td>
+            <td>Free</td>
+            <td>$5,000 / yr</td>
+            <td>$10,000 / yr</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="col boxed">
-        <h3>Need Help Building Your App?</h3>
-        <p><a href="https://convergencelabs.com">Convergence Labs</a> specializes in building real time / collaborative applications. Whether you are considering Convergence or any other real time technology, Convergence Labs can help you design and implement a highly effective collaborative application.</p>
-        <a class="btn btn-primary" href="https://convergencelabs.com/contact/">Contact Us <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="support-call-to-action">
+          <p>Signing up for a support subscription is quick and easy. Contact <a href="//convergencelabs.com">Convergence Labs</a> today to see which plan is right for you.
+          <p style="text-align: right"><a class="btn btn-primary" href="/contact-sales/">Contact Sales</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="support-call-to-action">
+          <h2>Why sign up for support?</h2>
+          <ul>
+            <li>Real Time Collaboration will be a favorite feature of your customers.</li>
+            <li>You'll get priority support for any issues that arise.</li>
+            <li>High priority on feature requests, examples, and custom integrations.</li>
+            <li>Early access to our tech-preview releases.</li>
+            <li>Get assistance on upgrades, high-availability deployments, etc.</li>
+          </ul>
+          <p style="text-align: right"><a class="btn btn-primary" href="/contact-sales/">Contact Sales</a></p>
+        </div>
       </div>
     </div>
   </div>
