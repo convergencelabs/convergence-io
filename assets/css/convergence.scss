@@ -276,6 +276,10 @@ Media Queries
     background: #c8e6ff;
   }
 
+  th:nth-child(5) {
+    background: #ffe5ce;
+  }
+
   td, th {
     padding: 5px;
     border-bottom: 1px solid #ddd;
@@ -314,6 +318,10 @@ Media Queries
 
     &.premium {
       background-color: #0e54bb;
+    }
+
+    &.enterprise {
+      background-color: #ff871e;
     }
   }
 
@@ -367,3 +375,4 @@ Media Queries
   padding: 30px;
   margin-top: 30px;
 }
+

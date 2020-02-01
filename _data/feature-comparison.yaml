@@ -4,42 +4,49 @@
   community: true
   standard: true
   premium: true
+  enterprise: true
 
-- title: Enterprise Docker Containers
-  description: Pull the enterprise containers right from Docker Hub for easy deployment.
+- title: Docker Containers
+  description: Pull the docker containers right from Docker Hub for easy deployment.
   community: true
   standard: true
   premium: true
+  enterprise: true
 
 - title: Omnibus Docker Container
   description: Pull the all-in-one omnibus container right from Docker Hub for easy deployment.
   community: true
   standard: true
   premium: true
+  enterprise: true
 
 - title: Developer Guide
   description: Learn how to deploy and use convergence with our comprehensive Developer Guide.
   community: true
   standard: true
   premium: true
+  enterprise: true
 
 - title: Convergence Community Forum
   description: Engage with the broader Convergence community to ask questions in the Convergence Community Forum.
   community: true
   standard: true
   premium: true
+  enterprise: true
 
 - title: Public Git Hub Issue Tracker
   description: Report issues, request festures, and ask questions in the Public GitHub Issue tracker.
   community: true
   standard: true
   premium: true
+  enterprise: true
 
 - title: Public Slack Channels
   description: Chat with the Convergence team and the broader community in the Convergence Public Slack.
   community: true
   standard: true
   premium: true
+  enterprise: true
 
 ## STANDARD
 - title: Private Slack Channel
@@ -47,24 +54,28 @@
   community: false
   standard: true
   premium: true
+  enterprise: true
 
 - title: 2 Business Day Issue Response
   description: Get a priority response to issues posted to GitHub within 2 business days.
   community: false
   standard: true
   premium: true
+  enterprise: true
 
 - title: Hot Fix Releases
   description: Get hot fixes to your issues in advance of the next release.
   community: false
   standard: true
   premium: true
+  enterprise: true
 
 - title: Prioritized Feature Requests
   description: Priority will be given to your feature requests on our road map.
   community: false
   standard: true
   premium: true
+  enterprise: true
 
 
 ## PREMIUM
@@ -73,21 +84,61 @@
   community: false
   standard: false
   premium: true
+  enterprise: true
 
 - title: 1 Business Day Issue Response
   description: Get a priority response to issues posted to GitHub within 1 business day.
   community: false
   standard: false
   premium: true
+  enterprise: true
 
 - title: Direct Email Support
   description: Get dedicated email communication to work with the Convergence team.
   community: false
   standard: false
   premium: true
+  enterprise: true
 
 - title: 5 Consulting Hours per Year
   description: Get 5 hours of complimentary consulting to help design you app and integration Convergence.
   community: false
   standard: false
   premium: true
+  enterprise: true
+
+## Enterprise
+- title: Clustered / Scalable Deployment Support
+  description: Clustering is enabled in all version of Convergence, but are generally self supported. With Enterprise support we will support your scalable deployments.
+  community: false
+  standard: false
+  premium: false
+  enterprise: true
+
+- title: Backup and Disastery Recovery Support
+  description: Backup and Restore are enabled in all version of Convergence, but is generally self supported. With Enterprise support we will help support your backup and recovery implementations.
+  community: false
+  standard: false
+  premium: false
+  enterprise: true
+
+- title: Custom Integrations
+  description: Work with the Convergence Labs team to integrate Convergence into your environment, including infrastrcure, user intrface components, etc.
+  community: false
+  standard: false
+  premium: false
+  enterprise: true
+
+- title: Custom Support SLA
+  description: Customize your support experience to get the level of support you need.
+  community: false
+  standard: false
+  premium: false
+  enterprise: true
+
+- title: Custom Consulting Packages
+  description: Custom consulting hour packages at a significantly discounted rate.
+  community: false
+  standard: false
+  premium: false
+  enterprise: true

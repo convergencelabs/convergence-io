@@ -1,0 +1,11 @@
+<!-- ========== Recent News ========== -->
+<h4 class="recent-news">Recent News</h4>
+{% for post in site.posts limit:4 %}
+<div class="recent-news-item">
+  <a href="{{ post.url }}"><h5 class="h-alt">{{post.title}}</h5></a>
+  <a href="{{ post.url }}" class="post-date">
+    <i class="fa fa-calendar-o"></i>
+    <span>{{ post.date | date: "%B %d, %Y" }}</span>
+  </a>
+</div>
+{% endfor %}

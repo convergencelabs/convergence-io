@@ -1,0 +1,70 @@
+---
+layout: page
+title: News
+permalink: /news/
+pagination:
+  enabled: true
+---
+
+<!-- ========== Blog  ========== -->
+<div id="blog" class="section container blog-columns">
+  <div class="row">
+    <!-- ========== Blog Posts  ========== -->
+    <div class="col-md-8">
+      {% for post in paginator.posts %}
+      {% assign loopindex = forloop.index0 | modulo: 2   %}
+      {% if loopindex == 0 %}
+      <div class="row blog-row">
+      {% endif%}
+        <div class="col-lg-12 mb-sm-50 ws-s blog-column">
+          {% include news-excerpt.html %}
+        </div><!-- / .col-lg-6 -->
+      {% if loopindex == 1 or forloop.last %}
+      </div>
+      {% endif %}
+      {% endfor %}
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <!-- Pagination -->
+          <nav class="blog-pagination mb-sm-100">
+            <ul class="pagination">
+              {% if paginator.previous_page %}
+              <li class="previous">
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous">
+                  <span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span>
+                </a>
+              </li>
+              {% endif %}
+              {% if paginator.page_trail %}
+              {% for trail in paginator.page_trail %}
+              <li {% if page.url == trail.path %}class="selected"{% endif %}>
+                <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+              </li>
+              {% endfor %}
+              {% endif %}
+              {% if paginator.next_page %}
+              <li class="next">
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Next">
+                  <span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div><!-- / .col-md-8 -->
+      </div>
+    </div>
+
+    <!-- ========== Blog Sidebar ========== -->
+    <aside class="col-md-offset-1 col-md-3 sidebar">
+      <div class="col-md-12 text-widget ws-s">
+        <h4 class="header-widget">About</h4>
+        <p>The Convergence News page is where me make important announcements about Convergence and the Convergence Community. Check here regularly to stay up to date on Convergence.
+          </p>
+      </div><!-- / .text-widget -->
+      
+      {% include news-nav.html %}
+    </aside>
+
+  </div><!-- / .row -->
+</div><!-- / .container -->

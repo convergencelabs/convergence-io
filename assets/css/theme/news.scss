@@ -1,0 +1,17 @@
+.recent-news-item {
+  margin-bottom: 20px;
+  h5 {
+    margin-bottom: 0;
+  }
+}
+
+.news-excerpt {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+
+  .read-more {
+    text-align: right;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}

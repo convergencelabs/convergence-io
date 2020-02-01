@@ -90,7 +90,6 @@
 }
 
 .navbar-collapse {
-  background-color: rgba(0, 0, 0, 0.9);
   -webkit-transition: background .5s ease-in-out;
   -moz-transition: background .5s ease-in-out;
   transition: background .5s ease-in-out;
@@ -120,8 +119,14 @@
   color: #00a8d6;
 }
 
-.scroll-fixed-navbar .navbar-collapse {
-  background-color: #fff;
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .scroll-fixed-navbar .navbar-collapse {
+    background-color: #fff;
+  }
 }
 
 .navbar-toggle {
@@ -280,4 +285,10 @@ Banner
       color: #08b4da;
     }
   }
+}
+
+.navbar .fa-github {
+  font-size: 30px;
+  position: relative;
+  top: -5px;
 }
