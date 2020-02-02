@@ -99,6 +99,9 @@ pagination:
   # Without file extension
   indexpage: 'index'
 
+autopages:
+  enabled: false
+
 sass:
   sass_dir: assets/css
 

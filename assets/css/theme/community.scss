@@ -1,0 +1,14 @@
+#community {
+  .boxed {
+    display: flex;
+    flex-direction: column;
+
+    .spacer {
+      flex: 1;
+    }
+
+    .call-to-action {
+      text-align: right;
+    }
+  }
+} 
