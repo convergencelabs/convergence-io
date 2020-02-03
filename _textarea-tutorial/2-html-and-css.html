@@ -1,0 +1,38 @@
+---
+layout: tutorial
+title: Textarea Tutorial
+step: HTML and CSS
+permalink: /textarea-tutorial/html-and-css
+---
+<div class="container-fluid alt-bands">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 alt-band-title"><h2>HTML Setup</h2></div>
+    <div class="col-md-8 col-sm-12 alt-band-content">
+      <p>
+        We provide a Javascript API to help you build realtime applications. So what’s the simplest collaborative web
+        application that you can think of? How about a realtime textarea? Two people can go to the same URL and use the
+        same <strong>textarea</strong> at once. Just create the element, connect to Convergence, and bind to the model: we take care of
+        all the events and data synchronization. Easy peasy.
+      </p>
+      <p>
+        Let’s lay out a basic example index.html that includes the Convergence javascript client and utilities and
+        creates a simple <strong>textarea</strong> element:
+      </p>
+      <pre class="codeblock"><code>&lt;html&gt;
+  &lt;head>
+    &lt;script src="http://localhost:8000/client/rxjs.umd.min.js">&lt;/script>
+    &lt;script src="http://localhost:8000/client/convergence.js">&lt;/script>
+    &lt;script src="https://cdn.jsdelivr.net/npm/@convergence/input-element-bindings@0.3.4/browser/convergence-input-element-bindings.min.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+   &lt;h2>A Collaborative Text Area&lt;/h2>
+   &lt;textarea id="textarea">&lt;/textarea>
+   &lt;script type="text/javascript">
+     // See code snippets below
+   &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+      <p>Next add the code from the following steps to the script tag in the index.html.</p>
+    </div>
+  </div>
+</div>

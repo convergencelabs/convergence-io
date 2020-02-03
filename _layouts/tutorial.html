@@ -1,0 +1,23 @@
+---
+layout: page
+---
+<div class="tutorial">
+  <div class="tutorial-sidenav">
+    <h3>{{page.title}}</h3>
+    <ol>
+      {% for step in site[page.collection] %}
+      <li>
+        <a class="{% if step.url == page.url %}active{% endif %}" href="{{step.url}}">{{ step.step }}</a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+  <div class="tutorial-main">
+    <h3 class="tutorial-step-title">{{page.step}}</h3>
+    {% include tutorial-nav.html %}
+    <div class="tutorial-content">
+      {{ content }}
+    </div>
+    {% include tutorial-nav.html %}
+  </div>
+</div>

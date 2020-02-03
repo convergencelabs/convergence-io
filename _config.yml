@@ -36,9 +36,12 @@ plugins:
 ############################################################
 permalink: /news/:year/:month/:slug/
 
+############################################################
+# Collections
+############################################################
 collections:
-  authors:
-    permalink: /news/author/:name/
+  textarea-tutorial:
+    tutorial: Textarea Tutorial
     output: true
 
 ############################################################

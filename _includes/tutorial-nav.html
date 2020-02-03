@@ -1,0 +1,9 @@
+<div class="tutorial-nav">
+  {% if page.previous.url %}
+  <a href="{{ page.previous.url }}"><i class="fa fa-arrow-left"></i> {{page.previous.step}}</a>
+  {% endif %}
+  <div class="spacer"></div>
+  {% if page.next.url %}
+  <a href="{{ page.next.url }}">{{page.next.step}} <i class="fa fa-arrow-right"></i></a>
+  {% endif %}
+</div>
