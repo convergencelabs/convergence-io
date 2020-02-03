@@ -1,0 +1,71 @@
+---
+layout: tutorial
+title: Textarea Tutorial
+step: Introduction
+permalink: /textarea-tutorial/
+---
+
+<div class="container-fluid mw800">
+  <div class="row">
+    <h2>Overview</h2>
+    <p>
+      In this tutorial we will show how to build a simple text editor based on a plain HTML
+      <strong>&lt;textarea&gt;</strong>. The tutorial will implement shared editing within
+      the <strong>&lt;textarea&gt;</strong> using Convergence's Real Time Data subsystem.
+      The tutorial show remote users' cursors and selections using the RealTimeModel's
+      "reference" feature. When complete the tutorial will produce a result similar to
+      Figure 1 below.
+    </p>
+    <img width="780" src="../assets/img/textarea-tutorial/shared-cursors-and-selections.gif" alt="result"/>
+    <div style="text-align: center; font-style: italic">Figure 1: Tutorial Result</div>
+  </div>
+  <div class="row">
+    <h2>Dependencies</h2>
+    <div>
+      <p>Several libraries utilities are used to simplify this example:</p>
+      <ul>
+        <li>
+          <a href="https://github.com/convergencelabs/convergence-client-javascript">Convergence Client</a>:
+          The JavaScript client API for Convergence.
+        </li>
+        <li>
+          <a href="https://github.com/convergencelabs/color-assigner">Convergence Color Assigner</a>:
+          A Utility to assign unique colors to remote users.
+        </li>
+        <li>
+          <a href="https://github.com/convergencelabs/html-text-collab-ext">
+            HTML Text Collaborative Extensions</a>:
+            A utility that extends the API of a normal text area to facility collaboration.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <h2>Convergence Server</h2>
+    <div>
+      <p>
+      You will need a running instance of the Convergence Server to implement this tutorial. If you do not
+      have one running the easiest way to run the Convergence Server is to run the
+      <a href="https://hub.docker.com/u/convergencelabs"></a>Convergence Omnibus Container</a>
+      in <a href="https://www.docker.com/get-started">Docker</a>.  Assuming you have Docker installed
+      You can pull and run the Convergence Omnibus Container with:
+      </p>
+      <pre><code class="bash">docker run -p "8000:80" --name convergence convergencelabs/convergence-omnibus</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <h2>Additional Resources</h2>
+    <div>
+      <p>You may want to refer to the following resources while going through this tutorial:</p>
+      <ul>
+        <li>
+          <a href="https://docs.convergence.io/guide/">Convergence Developer's Guide</a>
+        </li>
+        <li>
+          <a href="https://docs.convergence.io/js-api/">Convergence JavaScript Client API</a>
+        </li>
+      </ul>
+      <p>Alight, let's get started!</p>
+    </div>
+  </div>
+</div>

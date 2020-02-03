@@ -7,16 +7,18 @@
     margin-right: 20px;
     padding-right: 20px;
 
+    width: 300px;
+
     ol {
       padding: 20px;
-    }
+      font-size: 16px;
+      li a {
+        padding-left: 5px;
 
-    li a {
-      padding-left: 5px;
-
-      &.active {
-        font-weight: bold;
-        color: #1f3466;
+        &.active {
+          font-weight: bold;
+          color: #1f3466;
+        }
       }
     }
   }
@@ -29,15 +31,29 @@
 
     .tutorial-step-title {
       text-align: center;
+      font-weight: bold;
     }
 
     .tutorial-content {
       flex: 1;
+
+      h2 {
+        margin-top: 10px;
+        color: #0092dd
+      }
+
+      .row {
+        padding: 10px;
+      }
     }
 
     .tutorial-nav {
       display: flex;
       flex-direction: row;
+
+      font-size: 16px;
+
+      padding: 10px 0;
 
       .spacer {
         flex: 1;
