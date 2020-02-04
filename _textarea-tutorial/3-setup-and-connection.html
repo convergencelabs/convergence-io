@@ -1,0 +1,75 @@
+---
+layout: tutorial
+title: Textarea Tutorial
+step: Setup and Connecting
+permalink: /textarea-tutorial/setup-and-connecting
+---
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Configure the Convergence URL</h2>
+      <p>
+        First, let's set the URL that will be used to connect to your Convergence Server. Add the following code to
+        the <strong>tutorial-config.js</strong> file.  Note that this assumes you are using the Convergence Omnibus Container running
+        on port 8000 and that you are using the <strong>convergence/default</strong> domain that is automatically
+        created for your.  If this is not the case update the connection URL to fit your deployment.
+      </p>
+      <p><strong>tutorial-config.js</strong></p>
+      <pre class="codeblock"><code>const CONVERGENCE_URL = "http://localhost:8000/api/realtime/convergence/default";</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Create a Unique User Display Name</h2>
+      <p>
+        We are going to be using Anonymous Authentication, so we want to create a pseudo random Display name
+        for each user so we can tell them apart.  At the top of the <strong>tutorial.js</strong> file add
+        the lines below:
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>const username = "User-" + Math.round(Math.random() * 10000);
+document.getElementById("username").innerHTML = username;</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Add Connection Logic</h2>
+      <p>
+        Next we will add the basic logic to the <strong>tutorial.js</strong>connect to Convergence. For now we will just log that we are connected.
+        Notice that we are using the <strong>CONVERGENCE_URL</strong> which defines the connection URL and the
+        <strong>username</strong> that we generated above to connect using the <strong>connectAnonymously</strong>
+        method.  This returns a Promise with the ConvergenceDomain when connected or an error if there is one.
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>Convergence.connectAnonymously(CONVERGENCE_URL, username).then(domain => {
+  console.log("Convergence is connected!");
+}).catch(error => {
+  console.error(error);
+});</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Checkpoint</h2>
+      <p>
+        Your tutorial.js file should look like this:
+      </p>
+      <pre class="codeblock"><code>const username = "User-" + Math.round(Math.random() * 10000);
+document.getElementById("username").innerHTML = username;
+
+Convergence.connectAnonymously(CONVERGENCE_URL, username).then(domain => {
+  console.log("Convergence is connected!");
+}).catch(error => {
+  console.error(error);
+});</code></pre>
+      <p>
+        At this point you should be able to refresh your browser tab that contains the <strong>index.html</strong>
+        and see the text "Convergence is connected!" printed to the console. If there is an error, check your code
+        and adjust as necessary.
+      </p>
+      <p>
+        Next, we will add the required logic to create / open the RealTimeModel that will be used for collaboration.
+      </p>
+    </div>
+  </div>
+</div>

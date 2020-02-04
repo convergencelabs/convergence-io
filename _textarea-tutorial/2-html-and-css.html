@@ -9,8 +9,11 @@ permalink: /textarea-tutorial/html-and-css
     <div class="col-md-12">
       <h2>Create a Basic HTML 5 Page</h2>
       <p>
-        Let's first create a basic HTML 5 page with &lt;head&gt; and &lt;body&gt; element where we will add content to.
+        Let's first create a basic HTML 5 page with <strong>&lt;head&gt;</strong> and <strong>&lt;body&gt;</strong>
+        element where we will add content to. Create an <strong>index.html</strong> file and add the following
+        content:
       </p>
+      <p><strong>index.html</strong></p>
       <pre class="codeblock"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -36,6 +39,7 @@ permalink: /textarea-tutorial/html-and-css
         <strong>html-text-collab-ext.min.js</strong> is a utility to that adapts a basic HTML Text Area to add
         collaborative APIs.
       </p>
+      <p><strong>index.html</strong></p>
       <pre class="codeblock"><code>&lt;script src="https://cdn.jsdelivr.net/npm/rxjs@6.5.4/bundles/rxjs.umd.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/@convergence/convergence@1.0.0-rc.5/convergence.global.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/@convergence/color-assigner@0.3.0/umd/color-assigner.min.js"&gt;&lt;/script&gt;
@@ -50,6 +54,7 @@ permalink: /textarea-tutorial/html-and-css
         the styles for the collaborative text area utility.  The <strong>tutorial.css</strong> provides some nice looking
         style for for this example.
       </p>
+      <p><strong>index.html</strong></p>
       <pre class="codeblock"><code>&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@convergence/html-text-collab-ext@0.2.0/css/html-text-collab-ext.min.css" /&gt;
 &lt;link rel="stylesheet" type="text/css" href="tutorial.css" /&gt;</code></pre>
     </div>
@@ -61,6 +66,7 @@ permalink: /textarea-tutorial/html-and-css
         Add the following code snippet to the end of the &lt;body&gt; element. This adds the textarea that wil be
         used as well as some other content.
       </p>
+      <p><strong>index.html</strong></p>
       <pre class="codeblock"><code>&lt;div class="container"&gt;
   &lt;div class="instructions"&gt;Open this page in two browser windows side-by-side and start typing!&lt;/div&gt;
   &lt;div&gt;
@@ -79,9 +85,19 @@ permalink: /textarea-tutorial/html-and-css
         Server you wish to use.  The <strong>tutorial-data.ja</strong> script adds the default text content for collaboration.
         The <strong>tutorial.js</strong> script adds the default text content for collaboration.
       </p>
+      <p><strong>index.html</strong></p>
       <pre class="codeblock"><code>&lt;script type="text/javascript" src="tutorial-config.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="tutorial-data.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="tutorial.js"&gt;&lt;/script&gt;</code></pre>
+      <p>
+        Let's create all three of those files as empty script files so that the browser doesn't complain. Create
+        these three files in the same director as the <strong>index.html</strong>:
+      </p>
+      <ul>
+        <li>tutorial-config.js</li>
+        <li>tutorial-data.js</li>
+        <li>tutorial.js</li>
+      </ul>
     </div>
   </div>
   <div class="row">
@@ -90,6 +106,7 @@ permalink: /textarea-tutorial/html-and-css
       <p>
         The final HTML file should look something like the below:
       </p>
+      <p><strong>index.html</strong></p>
       <pre class="codeblock"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -123,6 +140,75 @@ permalink: /textarea-tutorial/html-and-css
   &lt;script type="text/javascript" src="tutorial.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Add Style</h2>
+      <p>
+        Let's add some CSS to make the page look a little better. Create a <strong>tutorial.css</strong> file
+        and paste in following CSS:
+      </p>
+      <p><strong>tutorial.css</strong></p>
+      <pre class="codeblock"><code>body {
+    font-family: Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+img {
+    height: 48px;
+    margin-right: 15px;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.container {
+    width: 500px;
+}
+
+.instructions {
+    font-style: italic;
+    font-size: 14px;
+    padding: 5px;
+    background: #EEEEEE;
+    border: 1px solid darkgray;
+    margin-bottom: 15px;
+}
+
+.username-label {
+    font-weight: bold;
+}
+
+textarea {
+    line-height: 1.2;
+    margin-top: 20px;
+    padding: 5px;
+    height: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Checkpoint</h2>
+      <p>
+        If everything has gone to plan, if you open up your <strong>index.html</strong> should should see
+        something like the figure below:
+      </p>
+      <p style="text-align: center">
+        <img width="500" src="../assets/img/textarea-tutorial/step1.png" />
+        <br/>
+        <span style="font-style: italic">Figure 2: Initial HTML Page</span>
+      </p>
+      <p>Next we will add the required JavaScript to connect to Convergence.</p>
     </div>
   </div>
 </div>
