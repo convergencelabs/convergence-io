@@ -1,0 +1,104 @@
+---
+layout: tutorial
+title: Textarea Tutorial
+step: Data Binding
+permalink: /textarea-tutorial/data-binding
+---
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Obtain the Text Data</h2>
+      <p>
+        Each RealTimeModel has a object at its root. We created the model with the following data:
+      </p>
+      <pre class="codeblock"><code>{
+  text: DEFAULT_TEXT_DATA
+}</code></pre>
+      <p>
+        We stored the text data we want to collaborate on in the <strong>text</strong> property. The
+        Model will therefore contain a RealTimeString under the <strong>text</strong> property. We will
+        need to grab this RealTimeString in order to collaborate. We can obtain the RealTimeString
+        from the <strong>text</strong> property using the code below.  We don't modify any existing
+        files just yet, but we will use this code snippet later on.
+      </p>
+      <pre class="codeblock"><code>// Get a RealTimeString instance from the "text" property of the RealTimeModel
+const rts = model.elementAt(["text"]);</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Create a Helper Function to Bind the Textarea</h2>
+      <p>
+        We will now create a helper function that takes a RealTimeString and binds it to the textarea.
+        This helper method will create a two-way binding between the textarea and the RealTimeString.
+        We will create this helper method now, and then call it later on. Add the following code to the
+        end of the <strong>tutorial.js</strong> file.
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>const textarea = document.getElementById("textarea");
+let textEditor;
+
+// Bind the text area to the real time string
+function bindTextarea(rts) {
+  // Set the initial data, and set the cursor to the beginning of the text area.
+  textarea.value = rts.value();
+  textarea.selectionStart = 0;
+  textarea.selectionEnd = 0;
+
+  // Create the editor utility passing callbacks to bind local events to
+  // the RealtimeString.
+  textEditor = new HtmlTextCollabExt.CollaborativeTextArea({
+    control: textarea,
+    onInsert: (index, value) => rts.insert(index, value),
+    onDelete: (index, length) => rts.remove(index, length),
+    onSelectionChanged: sendLocalSelection
+  });
+
+  // Listen to remote events and pass them to the editor utility
+  rts.on(Convergence.StringInsertEvent.NAME, (e) => textEditor.insertText(e.index, e.value));
+  rts.on(Convergence.StringRemoveEvent.NAME, (e) => textEditor.deleteText(e.index, e.value.length));
+}</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Bind the Model to the Textarea</h2>
+      <p>
+        We will now modify the promise callback method that handles the open model, to obtain the
+        RealTimeString from the <strong>text</strong> property and pass that to the
+        <strong>bindTextarea()</strong> method we just created. This portion of the code should
+        now look like the below:
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>Convergence.connectAnonymously(CONVERGENCE_URL, username).then(domain => {
+  return domain.models().openAutoCreate({
+    collection: "convergence-tutorials",
+    id: "textarea",
+    ephemeral: true,
+    data: {
+      text: DEFAULT_TEXT_DATA
+    }
+  });
+}).then(model => {
+  // New Code
+  const rts = model.elementAt(["text"]);
+  bindTextarea(rts);
+}).catch(error => {
+  console.error(error);
+});</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Checkpoint</h2>
+      <p>
+        At this point, you should be able to open the <strong>index.html</strong> in two separate browser
+        tabs and collaboratively edit the text in one text area and see it reflected in the other.
+      </p>
+      <p>
+        Next, we will add the required logic add shared cursor and selections to the textarea in order
+        to give the user a more intuitive experience.
+      </p>
+    </div>
+  </div>
+</div>

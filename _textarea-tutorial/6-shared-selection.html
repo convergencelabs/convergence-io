@@ -1,0 +1,157 @@
+---
+layout: tutorial
+title: Textarea Tutorial
+step: Shared Selection
+permalink: /textarea-tutorial/shared-selection
+---
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Create a ColorAssigner</h2>
+      <p>
+        In order to allow the user to easily distinguish the collaborative cues from different users
+        we want each remote user's cues to have unique colors. We will create a
+        <strong>ColorAssigner</strong> that will help us pick unique colors. Add the following code
+        to the bottom of the <strong>tutorial.js</strong> file.
+      </p>
+      <strong>tutorial.js</strong>
+      <pre class="codeblock"><code>const colorAssigner = new ConvergenceColorAssigner.ColorAssigner();</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Create a Helper Function to Initialize Shared Selections</h2>
+      <p>
+        We will now create a helper function that initializes the shared cursors and selections.
+        This method will create a RangeReference that will be used to share the local user's selection and
+        then prepare the system to handle remote user's selections. This helper method will call a
+        few other methods that will be implemented in subsequent steps.
+
+        Add the following code to the end of the <strong>tutorial.js</strong> file.
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>let localSelectionReference;
+
+function initSharedSelection(rts) {
+  // Create a local reference that will be used to send the local
+  // users selection and cursor.
+  localSelectionReference = rts.rangeReference("selection");
+
+  // Set and share the local selection.
+  sendLocalSelection();
+  localSelectionReference.share();
+
+  // Get all existing "selection" references from the RealTimeString
+  // and create remote selection cue for each.
+  const references = rts.references({key: "selection"});
+  references.forEach((reference) => {
+    if (!reference.isLocal()) {
+      addRemoteSelection(reference);
+    }
+  });
+
+  // Listen to the "reference" event which will be fired
+  // when a new remote user shares their selection.
+  rts.on("reference", (e) => {
+    if (e.reference.key() === "selection") {
+      addRemoteSelection(e.reference);
+    }
+  });
+}</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Add a Helper Function to Send the Local Selection</h2>
+      <p>
+        We will now implement the <strong>addRemoteSelection()</strong> method that will
+        set the current selection using the <strong>localSelectionReference</strong> RangeReference
+        we created earlier. Add the following code to the end of the <strong>tutorial.js</strong> file.
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>function sendLocalSelection() {
+  const selection = textEditor.selectionManager().getSelection();
+  localSelectionReference.set({start: selection.anchor, end: selection.target});
+}</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Add a Helper Function to Render Remote Selections</h2>
+      <p>
+        We will now implement the <strong>addRemoteSelection()</strong> method that will
+        add a new collaborator to the text editor. The method take a RangeReference,
+        adds a collaborator to the text editor, binds the reference's events to the
+        appropriate methods on the text editor's collaborator. Add the following code to
+        the end of the <strong>tutorial.js</strong> file.
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>function addRemoteSelection(reference) {
+  const color = colorAssigner.getColorAsHex(reference.sessionId());
+  const remoteRange = reference.value();
+
+  // Gets the text editors SelectionManager.
+  const selectionManager = textEditor.selectionManager();
+
+  // Add a new collaborator to the text editor.
+  selectionManager.addCollaborator(
+      reference.sessionId(),
+      reference.user().displayName,
+      color,
+      {anchor: remoteRange.start, target: remoteRange.end});
+
+  // Monitor the events from the remote reference and update the
+  // remote users selection in the SelectionManager.
+  reference.on("cleared", () => selectionManager.removeCollaborator(reference.sessionId()) );
+  reference.on("disposed", () => selectionManager.removeCollaborator(reference.sessionId()) );
+  reference.on("set", (e) => {
+    const selection = reference.value();
+    const collaborator = selectionManager.getCollaborator(reference.sessionId());
+    collaborator.setSelection({anchor: selection.start, target: selection.end});
+    if (!e.synthetic) {
+      collaborator.flashCursorToolTip(2);
+    }
+  });
+}</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Initialize Shared Selections after Opening the Model</h2>
+      <p>
+        We will now modify the promise callback method that handles the open model, call the
+        <strong>initSharedSelection()</strong> method we just created. This portion of the code
+        should now look like the below:
+      </p>
+      <p><strong>tutorial.js</strong></p>
+      <pre class="codeblock"><code>Convergence.connectAnonymously(CONVERGENCE_URL, username).then(domain => {
+  return domain.models().openAutoCreate({
+    collection: "convergence-tutorials",
+    id: "textarea",
+    ephemeral: true,
+    data: {
+      text: DEFAULT_TEXT_DATA
+    }
+  });
+}).then(model => {
+  const rts = model.elementAt(["text"]);
+  bindTextarea(rts);
+  initSharedSelection(rts);
+}).catch(error => {
+  console.error(error);
+});</code></pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Checkpoint</h2>
+      <p>
+        At this point, you should be able to open the <strong>index.html</strong> in two separate browser
+        tabs and collaboratively edit the text complete with shared cursors and selection.
+      </p>
+      <p>
+        Next, we will review the final state of the tutorial and we accomplished.
+      </p>
+    </div>
+  </div>
+</div>
