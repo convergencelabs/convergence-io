@@ -1,144 +1,68 @@
 ## COMMUNITY
-- title: Source Code Access
-  description: View all of the source code that makes up Convergence.  Submit pull requests to fix issues or add features.
-  community: true
-  standard: true
-  premium: true
-  enterprise: true
 
-- title: Docker Containers
-  description: Pull the docker containers right from Docker Hub for easy deployment.
-  community: true
-  standard: true
-  premium: true
-  enterprise: true
+tiers:
+  - name: 'Community' 
+    price: Free
+    features: 
+    - title: Source Code Access
+      description: View all of the source code that makes up Convergence.  Submit pull requests to fix issues or add features.
 
-- title: Omnibus Docker Container
-  description: Pull the all-in-one omnibus container right from Docker Hub for easy deployment.
-  community: true
-  standard: true
-  premium: true
-  enterprise: true
+    - title: Docker Containers
+      description: Pull the docker containers right from Docker Hub for easy deployment.
 
-- title: Developer Guide
-  description: Learn how to deploy and use convergence with our comprehensive Developer Guide.
-  community: true
-  standard: true
-  premium: true
-  enterprise: true
+    - title: All-in-one Docker Container
+      description: Pull the all-in-one omnibus container right from Docker Hub to quickly get started coding.
 
-- title: Convergence Community Forum
-  description: Engage with the broader Convergence community to ask questions in the Convergence Community Forum.
-  community: true
-  standard: true
-  premium: true
-  enterprise: true
+    - title: Developer Guide and API Documentation
+      description: Learn how to use Convergence with our comprehensive documentation.
 
-- title: Public Git Hub Issue Tracker
-  description: Report issues, request festures, and ask questions in the Public GitHub Issue tracker.
-  community: true
-  standard: true
-  premium: true
-  enterprise: true
+    - title: Convergence Community Forum
+      description: Engage with the broader Convergence community to ask and answer questions in our public forum.
 
-- title: Public Slack Channels
-  description: Chat with the Convergence team and the broader community in the Convergence Public Slack.
-  community: true
-  standard: true
-  premium: true
-  enterprise: true
+    - title: Public GitHub Issue Tracker
+      description: Report issues and request enhancements in GitHub as you're used to.
 
-## STANDARD
-- title: Private Slack Channel
-  description: Get a private, dedicated slack channel to chat with the Convergence team.
-  community: false
-  standard: true
-  premium: true
-  enterprise: true
+    - title: Public Slack Channels
+      description: Chat with the Convergence team and the broader community in the Convergence Public Slack.
 
-- title: 2 Business Day Issue Response
-  description: Get a priority response to issues posted to GitHub within 2 business days.
-  community: false
-  standard: true
-  premium: true
-  enterprise: true
+  - name: 'Standard'
+    plus: 'All community benefits, plus:'
+    price: 'slider'
+    features:
+    - title: Private Slack Channel
+      description: Get a private, dedicated Slack channel with direct access to the Convergence team.
 
-- title: Hot Fix Releases
-  description: Get hot fixes to your issues in advance of the next release.
-  community: false
-  standard: true
-  premium: true
-  enterprise: true
+    - title: Two Business Day Responses
+      description: Get a priority response to issues posted to GitHub within 2 business days.
 
-- title: Prioritized Feature Requests
-  description: Priority will be given to your feature requests on our road map.
-  community: false
-  standard: true
-  premium: true
-  enterprise: true
+    - title: Hot Fix Releases
+      description: Get hot fixes to your issues in advance of the next release.
 
+    - title: Prioritized Feature Requests
+      description: Priority will be given to your feature requests on our road map.
 
-## PREMIUM
-- title: Private Issue Tracker
-  description: Get your own private issue tracker to track your sensative issues.
-  community: false
-  standard: false
-  premium: true
-  enterprise: true
+    - title: Direct Email Support
+      description: Get dedicated, direct email communication with the Convergence team.
 
-- title: 1 Business Day Issue Response
-  description: Get a priority response to issues posted to GitHub within 1 business day.
-  community: false
-  standard: false
-  premium: true
-  enterprise: true
+    - title: Private Issue Tracker
+      description: We'll keep track of your support tickets in a separate, private system.
+  
 
-- title: Direct Email Support
-  description: Get dedicated email communication to work with the Convergence team.
-  community: false
-  standard: false
-  premium: true
-  enterprise: true
+  - name: 'Enterprise'
+    plus: 'All standard benefits, plus:'
+    price: '<a class="btn btn-primary" href="/contact-sales/">Contact Us</a>'
+    features:
+    - title: Clustered / Scalable Deployment Support
+      description: Clustering is enabled in all versions of Convergence, but it's self-supported by default.  With Enterprise support we will support your scalable deployments.
 
-- title: 5 Consulting Hours per Year
-  description: Get 5 hours of complimentary consulting to help design you app and integration Convergence.
-  community: false
-  standard: false
-  premium: true
-  enterprise: true
+    - title: Backup and Disastery Recovery Support
+      description: Backup and Restore are enabled in all version of Convergence, but is generally self supported. With Enterprise support we will help support your backup and recovery implementations.
 
-## Enterprise
-- title: Clustered / Scalable Deployment Support
-  description: Clustering is enabled in all version of Convergence, but are generally self supported. With Enterprise support we will support your scalable deployments.
-  community: false
-  standard: false
-  premium: false
-  enterprise: true
+    - title: Custom Integrations
+      description: Work with the Convergence Labs team to integrate Convergence into your environment, including infrastrcure, user intrface components, etc.
 
-- title: Backup and Disastery Recovery Support
-  description: Backup and Restore are enabled in all version of Convergence, but is generally self supported. With Enterprise support we will help support your backup and recovery implementations.
-  community: false
-  standard: false
-  premium: false
-  enterprise: true
+    - title: Custom Support SLA
+      description: Customize your support experience to get the level of support you need.
 
-- title: Custom Integrations
-  description: Work with the Convergence Labs team to integrate Convergence into your environment, including infrastrcure, user intrface components, etc.
-  community: false
-  standard: false
-  premium: false
-  enterprise: true
-
-- title: Custom Support SLA
-  description: Customize your support experience to get the level of support you need.
-  community: false
-  standard: false
-  premium: false
-  enterprise: true
-
-- title: Custom Consulting Packages
-  description: Custom consulting hour packages at a significantly discounted rate.
-  community: false
-  standard: false
-  premium: false
-  enterprise: true
+    - title: Custom Consulting Packages
+      description: Custom consulting hour packages at a significantly discounted rate.
