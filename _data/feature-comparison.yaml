@@ -28,6 +28,7 @@ tiers:
   - name: 'Standard'
     plus: 'All community benefits, plus:'
     price: 'slider'
+    contrast: true
     features:
     - title: Private Slack Channel
       description: Get a private, dedicated Slack channel with direct access to the Convergence team.
