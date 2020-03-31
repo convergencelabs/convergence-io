@@ -28,9 +28,9 @@ layout: page
       </p>
       <pre class="codeblock"><code>&lt;html&gt;
   &lt;head>
-    &lt;script src="http://localhost:8000/client/rxjs.umd.min.js">&lt;/script>
-    &lt;script src="http://localhost:8000/client/convergence.js">&lt;/script>
-    &lt;script src="https://cdn.jsdelivr.net/npm/@convergence/input-element-bindings@0.3.4/browser/convergence-input-element-bindings.min.js">&lt;/script>
+    &lt;script src="https://cdn.jsdelivr.net/npm/rxjs@6.5.4/bundles/rxjs.umd.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/@convergence/convergence@1.0.0-rc.5/convergence.global.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/@convergence/input-element-bindings@0.3.4/browser/convergence-input-element-bindings.min.js"&gt;&lt;/script&gt;
   &lt;/head>
   &lt;body>
    &lt;h2>A Collaborative Text Area&lt;/h2>
@@ -52,7 +52,7 @@ layout: page
       <pre class="codeblock"><code>var domainUrl = "http://localhost:8000/api/realtime/convergence/default";
 Convergence.connectAnonymously(domainUrl)
   .then(initApp)
-  .catch(function(error) {
+  .catch((error) => {
     console.log("Could not connect: " + error);
   });</code></pre>
     </div>
@@ -64,7 +64,7 @@ Convergence.connectAnonymously(domainUrl)
         Data in a domain can be organized by collections of models. In this case, our model is simply an Object with a single string representing the contents of the textarea.
       </p>
       <pre class="codeblock"><code>function initApp(domain) {
-  var modelService = domain.models();
+  const modelService = domain.models();
   // If the collection and/or model don't exist, they will be created for you.
   modelService.openAutoCreate({
     collection: "example", 
@@ -72,7 +72,7 @@ Convergence.connectAnonymously(domainUrl)
     data: { text: "Hello World"} 
   })
   .then(initModel)
-  .catch(function(error) {
+  .catch((error) => {
     console.log("Could not open model: " + error);
   });
 }</code></pre>
@@ -85,8 +85,8 @@ Convergence.connectAnonymously(domainUrl)
         Now that we have connected to the domain and opened a model, let’s work with the text area we added to the HTML file. We will need a reference to the RealTimeString within the model in order to both update it and listen for remote changes.
       </p>
       <pre class="codeblock"><code>function initModel(model) {
-  var textArea = document.getElementById("textarea");
-  var realTimeString = model.elementAt("textValue");
+  const textArea = document.getElementById("textarea");
+  const realTimeString = model.elementAt("textValue");
 
   // Sets the value of the text area and performs a two-way-binding.
   ConvergenceInputElementBinder.bindTextInput(textArea, realTimeString);
