@@ -2,7 +2,8 @@
 
 tiers:
   - name: 'Community' 
-    price: Free
+    price: Free!
+    cssClass: basic
     features: 
     - title: Source Code Access
       description: View all of the source code that makes up Convergence.  Submit pull requests to fix issues or add features.
@@ -27,8 +28,7 @@ tiers:
 
   - name: 'Standard'
     plus: 'All community benefits, plus:'
-    price: 'slider'
-    contrast: true
+    price: $5,000 / year
     features:
     - title: Private Slack Channel
       description: Get a private, dedicated Slack channel with direct access to the Convergence team.
@@ -52,6 +52,7 @@ tiers:
   - name: 'Enterprise'
     plus: 'All standard benefits, plus:'
     price: '<a class="btn btn-primary" href="/contact-sales/">Contact Us</a>'
+    cssClass: contrast
     features:
     - title: Clustered / Scalable Deployment Support
       description: Clustering is enabled in all versions of Convergence, but it's self-supported by default.  With Enterprise support we will support your scalable deployments.

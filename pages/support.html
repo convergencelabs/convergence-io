@@ -18,7 +18,7 @@ layout: page
     <div class="row">
       {% for tier in site.data.feature-comparison.tiers %}
       <div class="col-lg-4">
-        <div class="support-tier{% if tier.contrast %} contrast{% endif %}">
+        <div class="support-tier {{ tier.cssClass }}">
           <div class="tier-header">
             <h2>{{ tier.name }}</h2>
           </div>
@@ -38,24 +38,7 @@ layout: page
             </ul>
           </div>
           <div class="tier-price">
-            {% if tier.price == 'slider' %}
-              <div class="support-picker">
-                <label for="hour-picker">Included support hours:</label>
-                <input type="range" id="hour-picker" min="40" max="120" value="40">
-                <div class="picker-values-label">
-                  <span>40</span>
-                  <span>120</span>
-                </div>
-                <div class="price">
-                  <span id="computed-amount">$5,000</span> / year
-                </div>
-              </div>
-              <div class="cta">
-                <a class="btn btn-primary" href="/contact-sales/">Contact Us</a>
-              </div>
-            {% else %}
-              {{ tier.price }}
-            {% endif %}
+            {{ tier.price }}
           </div>
         </div>
       </div>
@@ -68,32 +51,25 @@ layout: page
         <div class="support-call-to-action">
           <h2>Why sign up for support?</h2>
           <ul>
-            <li>Real Time Collaboration will be a favorite feature of your customers.</li>
             <li>You'll get priority support for any issues that arise.</li>
-            <li>High priority on feature requests, examples, and custom integrations.</li>
+            <li>Highest priority for feature requests, examples, and custom integrations.</li>
             <li>Early access to our tech-preview releases.</li>
             <li>Get assistance on upgrades, high-availability deployments, etc.</li>
           </ul>
-          <p style="text-align: right"><a class="btn btn-primary" href="/contact-sales/">Contact Us</a></p>
+          <p class="cta">
+            <a class="btn btn-primary" href="/contact-sales/">Contact Us</a>
+          </p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="support-call-to-action">
           <h2>Need Help Building Your App?</h2>
           <p><a href="https://convergencelabs.com">Convergence Labs</a> specializes in building real time / collaborative applications. Whether you are considering Convergence or any other real time technology, Convergence Labs can help you design and implement a highly effective collaborative application.</p>
-          <p style="text-align: right"><a class="btn btn-primary" href="https://convergencelabs.com/contact/">Contact Us</a></p>
+          <p class="cta">
+            <a class="btn btn-primary" href="https://convergencelabs.com/contact/">Contact Convergence Labs</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<script type="text/javascript">
-  $('#hour-picker').on("input change", function() {
-    var price = parseInt($(this).val(), 10) * 125;
-    var formatted = price.toLocaleString('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    });
-    $('#computed-amount').html(formatted.substr(0, formatted.length - 3));
-  });
-</script>
