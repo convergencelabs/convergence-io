@@ -1,30 +1,27 @@
 ---
 layout: post
-title: "Convergence 1.0.0 Release Candidate 5"
-description: "Announcing the release of Convergence 1.0.0-rc.5! No more waiting multiple months between releases. Check out the 29 improvement we've made."
-date: 2020-01-19 09:00:00 -0700
+title: "Convergence 1.0.0 Release Candidate 6"
+description: "Announcing the release of Convergence 1.0.0-rc.6!"
+date: 2020-05-16 09:00:00 -0700
 categories: [convergence]
 author: michael
 ---
-Hot on the heels of our significant [1.0.0-rc.4 release](/blog/2020/01/convergence-1-0-0-rc4/), we are pleased to announce the availability of [1.0.0-rc.5](https://github.com/convergencelabs/convergence-project/wiki/CHANGELOG#100-rc5-jan-19-2020). Release Candidate 4 got a lot of attention and had a lot of new features. Lots of users got their hands on that release and gave us quite a bit of feedback.  Release Candidate 5 is packed with 29 bug fixes and features prioritized by you, our community.
-
-Release Candidate 5 sees a continued emphasis on open sourcing and public artifact availability. We continue to migrate more code to GitHub, publish more artifacts in public repositories, and host public builds on Travis.
+The Convergence team is pleased to announce the availability of [1.0.0-rc.6](https://github.com/convergencelabs/convergence-project/wiki/CHANGELOG#100-rc5-may-16-2020). We re-prioritized much of our planned work in Release Candidate 6 to focus stability and quality improvements, as well as adding some features that rounded out the existing functionality. We have been getting a lot of good user engagement and we have used the feedback we have been getting to prioritize our efforts. There were 38 "official" bug fixes and enhancements in this release and almost as many items that we fixed / improved along the way.
 
 ## Release Highlights:
-Release Candidate 5 focuses mainly on:
+Release Candidate 6 focuses mainly on:
 
-* Bug fixes for the recently-released [offline support](/blog/2020/01/new-features-offline-support-and-connection-smoothing/).
-* Several fixes and improvements for the [Admin Web Console](https://github.com/convergencelabs/convergence-admin-console).
-* Several fixes and improvements for the Chat subsystem.
-* A new ability to query models by model id.
-* Open sourcing of more pieces of Convergence on GitHub.
-* Publishing additional artifacts to Maven Central.
+* Bug fixes and enhancements around user permissions for the Convergence Server and Domains.
+* Numerous fixes and improvements for the Chat subsystem, including a new screen that allows browsing of chat events.
+* Improvements to how Convergence operates in a clustered database setup.
+* Model Reference fixes.
+* Performance, stability, and API cleanup.
 
 ## What's Next?
-Check our road map [Here](https://github.com/convergencelabs/convergence-project/wiki/Convergence-Road-Map) to see what we are focusing on in general.  In the short term we'll be working on:
+Check our road map [Here](https://github.com/convergencelabs/convergence-project/wiki/Convergence-Road-Map) to see what we are focusing on in general.  The road map remains mostly the same, since we took a bit of a detour for this release. Mainly we will be working on:
 
 * More bug fixes.
-* More open sourcing.
+* API Consistency
 * The design and implementation of our [Experimental Rich Text Support](https://github.com/convergencelabs/convergence-project/issues/37).
 
-Happy coding!   
+Enjoy!
