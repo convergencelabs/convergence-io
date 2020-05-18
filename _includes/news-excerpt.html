@@ -1,22 +1,18 @@
 <div class="news-excerpt">
-  <!-- Post Title -->
-  <a href="{{ post.url }}" class="post-title"><h4>{{post.title}}</h4></a>
-
-  <!-- Meta data -->
-  <div class="post-meta">
-    <span class="post-date">
-      <i class="fa fa-calendar-o"></i>
-      <span>{{ post.date | date: "%B %d, %Y" }}</span>
-    </span>
-  </div><!-- / .meta -->
-
+  <div class="flex-grid">
+    <div class="col">
+      <!-- Post Title -->
+      <a href="{{ post.url }}" class="post-title"><h3>{{post.title}}</h3></a>
+    </div>
+    <div class="post-meta">
+      <span class="post-date">
+        <i class="fa fa-calendar-o"></i>
+        <span>{{ post.date | date: "%B %d, %Y" }}</span>
+      </span>
+    </div>
+  </div>
   <!-- Blurb -->
   <div class="post-excerpt">
-    {{ post.description }}
-  </div>
-
-  <!-- Link -->
-  <div class="read-more">
-    <a href="{{ post.url }}" class="">Read More</a>
+    {{ post.description }} <a href="{{ post.url }}" class="">Read More &rarr;</a>
   </div>
 </div><!-- / .news-post -->
