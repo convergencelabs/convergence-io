@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Convergence 1.0.0 Release Candidate 7"
-description: "Announcing the release of Convergence 1.0.0-rc.7!"
-date: 2020-05-16 09:00:00 -0700
+description: "1.0.0-rc.7 primarily focuses on the Convergence Server and upgrading some of its underlying dependencies."
+date: 2020-07-07 21:00:00 -0600
 categories: [convergence]
 author: michael
 ---
@@ -22,10 +22,12 @@ Release Candidate 7 focuses mainly on:
 
 
 ## What's Next?
-Check our road map [Here](https://github.com/convergencelabs/convergence-project/wiki/Convergence-Road-Map) to see what we are focusing on in general.  The road map remains mostly the same, since we took a bit of a detour for this release. Mainly we think we will be working on:
+Check our road map [here](https://github.com/convergencelabs/convergence-project/wiki/Convergence-Road-Map) to see what we are focusing on in general.  Next, we intend to work on:
 
 * A database schema upgrade system.
 * Production hardening.
 * The design and implementation of our [Experimental Rich Text Support](https://github.com/convergencelabs/convergence-project/issues/37).
+
+As always, please report any issues in [GitHub directly](https://github.com/convergencelabs/convergence-project/issues), our [forum](https://forum.convergence.io), or our [Slack workspace](https://slack.convergence.io).
 
 Happy coding!
