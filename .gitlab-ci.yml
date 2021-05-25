@@ -12,8 +12,8 @@ container:
         echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
       fi
     - mkdir -p /kaniko/.docker
-    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $CI_REGISTRY_IMAGE:${tag}
+    - echo "{\"auths\":{\"convergence-docker.nexus.convergencelabs.tech\":{\"username\":\"jenkins\",\"password\":\"$NEXUS_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination convergence-docker.nexus.convergencelabs.tech/convergence-io-www:${tag}
 
   # Run this job in a branch where a Dockerfile exists
   rules:
