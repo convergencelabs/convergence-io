@@ -14,34 +14,34 @@ container:
     - mkdir -p /kaniko/.docker
     - echo "{\"auths\":{\"convergence-docker.dev.convergencelabs.tech\":{\"username\":\"jenkins\",\"password\":\"$NEXUS_PASSWORD\"}}}" > /kaniko/.docker/config.json
     - |
-        echo "-----BEGIN CERTIFICATE-----
-          MIIEwTCCA6mgAwIBAgIJAJaqQuxs6THBMA0GCSqGSIb3DQEBCwUAMIGaMQswCQYD
-          VQQGEwJVUzEVMBMGA1UECAwMU291dGggRGFrb3RhMRQwEgYDVQQHDAtTaW91eCBG
-          YWxsczEfMB0GA1UECgwWQ29udmVyZ2VuY2UgTGFicywgSW5jLjEUMBIGA1UECwwL
-          RGV2ZWxvcG1lbnQxJzAlBgNVBAMMHkNvbnZlcmdlbmNlIEt1YmVybmV0ZXMgUm9v
-          dCBDQTAeFw0xODA2MDEyMzUxNDNaFw0yODA1MjkyMzUxNDNaMIGaMQswCQYDVQQG
-          EwJVUzEVMBMGA1UECAwMU291dGggRGFrb3RhMRQwEgYDVQQHDAtTaW91eCBGYWxs
-          czEfMB0GA1UECgwWQ29udmVyZ2VuY2UgTGFicywgSW5jLjEUMBIGA1UECwwLRGV2
-          ZWxvcG1lbnQxJzAlBgNVBAMMHkNvbnZlcmdlbmNlIEt1YmVybmV0ZXMgUm9vdCBD
-          QTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKRDsdz/Xw8iG/mM6CS3
-          MJWf/kCAS20zPCYmRGO36MCF/8c8HY9iNyEjJ+8tntJKzgXwgf7dkFLhBNq5Nvpa
-          FXjv4iijAUESXUlAAYd3yw6wgqG917rQlwRyt9Ma9pAeGd24Isweo1zM/sSK0D+8
-          FNRCQhgUHaFkWmdhOkVYEM3ROSjvpoZcQgiSN9KYIQ3c2tp5QC/IaXgx9QU8byO/
-          ucFFL53eGPJyc43NHRheNFKRstsv+SzEscv5/SLYW5ssTS4lcD1Xq8fI3l5Zb8H0
-          WRKYiazT8ATGRNNfySblcLEZaouBgKeF2IcNWkOHZ5uGXNfqgmYBcvM/HRYIIPGE
-          lVcCAwEAAaOCAQYwggECMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFAMocNZY
-          cD6lvHHMakTcauivc7OnMIHPBgNVHSMEgccwgcSAFAMocNZYcD6lvHHMakTcauiv
-          c7OnoYGgpIGdMIGaMQswCQYDVQQGEwJVUzEVMBMGA1UECAwMU291dGggRGFrb3Rh
-          MRQwEgYDVQQHDAtTaW91eCBGYWxsczEfMB0GA1UECgwWQ29udmVyZ2VuY2UgTGFi
-          cywgSW5jLjEUMBIGA1UECwwLRGV2ZWxvcG1lbnQxJzAlBgNVBAMMHkNvbnZlcmdl
-          bmNlIEt1YmVybmV0ZXMgUm9vdCBDQYIJAJaqQuxs6THBMA0GCSqGSIb3DQEBCwUA
-          A4IBAQBGcBUpgMrcpDPQZ4FzkJjKhb31rkFXPTzHcX3SvRNJYT68UhP4oecCWY8b
-          XFIkeBPLFImTDhaPd3z0UgxkCBcDhD+zLSQcQSAZyykfu3SOPZR03vythUtjRh6w
-          oErUKIPQnOJq15YXGD3EMe6Hgy2C+T2lo/NDCITg3megbcaU8aMf1w1bdvf0i055
-          WhlGUdw13q4gRXg6CKkJi3I59LWmaOp0IBHkBMkQbzUt0eX/+E/vI1fpYfZ3LWyU
-          8hi1L7mDP1djArU3dRJ0cshgAzKRPR8lLkRTNzSPwvxVu5xCGf4xMKmt76dPnpvn
-          pTCT7nfL0O3QfJ2RnocHy0b+EiBa
-          -----END CERTIFICATE-----" >> /kaniko/ssl/certs/ca-certificates.crt
+      echo "-----BEGIN CERTIFICATE-----
+      MIIEwTCCA6mgAwIBAgIJAJaqQuxs6THBMA0GCSqGSIb3DQEBCwUAMIGaMQswCQYD
+      VQQGEwJVUzEVMBMGA1UECAwMU291dGggRGFrb3RhMRQwEgYDVQQHDAtTaW91eCBG
+      YWxsczEfMB0GA1UECgwWQ29udmVyZ2VuY2UgTGFicywgSW5jLjEUMBIGA1UECwwL
+      RGV2ZWxvcG1lbnQxJzAlBgNVBAMMHkNvbnZlcmdlbmNlIEt1YmVybmV0ZXMgUm9v
+      dCBDQTAeFw0xODA2MDEyMzUxNDNaFw0yODA1MjkyMzUxNDNaMIGaMQswCQYDVQQG
+      EwJVUzEVMBMGA1UECAwMU291dGggRGFrb3RhMRQwEgYDVQQHDAtTaW91eCBGYWxs
+      czEfMB0GA1UECgwWQ29udmVyZ2VuY2UgTGFicywgSW5jLjEUMBIGA1UECwwLRGV2
+      ZWxvcG1lbnQxJzAlBgNVBAMMHkNvbnZlcmdlbmNlIEt1YmVybmV0ZXMgUm9vdCBD
+      QTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKRDsdz/Xw8iG/mM6CS3
+      MJWf/kCAS20zPCYmRGO36MCF/8c8HY9iNyEjJ+8tntJKzgXwgf7dkFLhBNq5Nvpa
+      FXjv4iijAUESXUlAAYd3yw6wgqG917rQlwRyt9Ma9pAeGd24Isweo1zM/sSK0D+8
+      FNRCQhgUHaFkWmdhOkVYEM3ROSjvpoZcQgiSN9KYIQ3c2tp5QC/IaXgx9QU8byO/
+      ucFFL53eGPJyc43NHRheNFKRstsv+SzEscv5/SLYW5ssTS4lcD1Xq8fI3l5Zb8H0
+      WRKYiazT8ATGRNNfySblcLEZaouBgKeF2IcNWkOHZ5uGXNfqgmYBcvM/HRYIIPGE
+      lVcCAwEAAaOCAQYwggECMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFAMocNZY
+      cD6lvHHMakTcauivc7OnMIHPBgNVHSMEgccwgcSAFAMocNZYcD6lvHHMakTcauiv
+      c7OnoYGgpIGdMIGaMQswCQYDVQQGEwJVUzEVMBMGA1UECAwMU291dGggRGFrb3Rh
+      MRQwEgYDVQQHDAtTaW91eCBGYWxsczEfMB0GA1UECgwWQ29udmVyZ2VuY2UgTGFi
+      cywgSW5jLjEUMBIGA1UECwwLRGV2ZWxvcG1lbnQxJzAlBgNVBAMMHkNvbnZlcmdl
+      bmNlIEt1YmVybmV0ZXMgUm9vdCBDQYIJAJaqQuxs6THBMA0GCSqGSIb3DQEBCwUA
+      A4IBAQBGcBUpgMrcpDPQZ4FzkJjKhb31rkFXPTzHcX3SvRNJYT68UhP4oecCWY8b
+      XFIkeBPLFImTDhaPd3z0UgxkCBcDhD+zLSQcQSAZyykfu3SOPZR03vythUtjRh6w
+      oErUKIPQnOJq15YXGD3EMe6Hgy2C+T2lo/NDCITg3megbcaU8aMf1w1bdvf0i055
+      WhlGUdw13q4gRXg6CKkJi3I59LWmaOp0IBHkBMkQbzUt0eX/+E/vI1fpYfZ3LWyU
+      8hi1L7mDP1djArU3dRJ0cshgAzKRPR8lLkRTNzSPwvxVu5xCGf4xMKmt76dPnpvn
+      pTCT7nfL0O3QfJ2RnocHy0b+EiBa
+      -----END CERTIFICATE-----" >> /kaniko/ssl/certs/ca-certificates.crt
     - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination convergence-docker.dev.convergencelabs.tech/convergence-io-www:${tag}
 
   # Run this job in a branch where a Dockerfile exists
