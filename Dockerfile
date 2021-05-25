@@ -1,4 +1,12 @@
+FROM jekyll/jekyll:3.6.2 as builder
+
+ADD --chown=jekyll:jekyll . /home/jekyll/src
+WORKDIR /home/jekyll/src
+
+RUN bundle install
+RUN bundle exec jekyll build --destination /home/jekyll/build --trace
+
 FROM nginx:stable-alpine
 
 COPY server/nginx.conf /etc/nginx/conf.d/default.conf
-COPY _site /usr/share/nginx/html
+COPY --from=builder /home/jekyll/build /usr/share/nginx/html
