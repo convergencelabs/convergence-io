@@ -1,5 +1,5 @@
 container:
-  stage: Container Build
+  stage: build
   image: gcr.io/kaniko-project/executor:debug
   script:
     - |
