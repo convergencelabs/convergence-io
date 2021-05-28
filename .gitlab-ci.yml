@@ -22,7 +22,7 @@ stages:
   - Promote
 
 variables:
-  DOCKER_IMAGE_NAME: convergence-js-apidocs
+  DOCKER_IMAGE_NAME: convergence-io-www
 
 Dockerfile Lint:
   extends: .docker-hadolint

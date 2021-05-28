@@ -1,10 +1,10 @@
 FROM jekyll/jekyll:3.6.2 as builder
 
-ADD --chown=jekyll:jekyll . /home/jekyll/src
+COPY --chown=jekyll:jekyll . /home/jekyll/src
 WORKDIR /home/jekyll/src
 
-RUN bundle install
-RUN bundle exec jekyll build --destination /home/jekyll/build --trace
+RUN bundle install && \
+    bundle exec jekyll build --destination /home/jekyll/build --trace
 
 FROM nginx:stable-alpine
 
