@@ -8,7 +8,7 @@ RUN bundle install && \
 
 FROM nginx:1.21.0-alpine
 
-RUN apk update && apk add --no-cache curl=7.77.0-r0
+RUN apk update && apk add --no-cache libcurl=7.77.0-r0 curl=7.77.0-r0
 
 COPY server/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /home/jekyll/build /usr/share/nginx/html
