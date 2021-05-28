@@ -6,7 +6,7 @@ WORKDIR /home/jekyll/src
 RUN bundle install && \
     bundle exec jekyll build --destination /home/jekyll/build --trace
 
-FROM nginx:stable-alpine
+FROM nginx:1.21.0-alpine
 
 COPY server/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /home/jekyll/build /usr/share/nginx/html
