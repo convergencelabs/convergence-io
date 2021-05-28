@@ -42,7 +42,7 @@ Truffle Hog:
   extends: .truffle-hog
   stage: Security
 
-Push Tag to Nexus:
+Push Latest to Nexus:
   extends: .nexus-push-container
   stage: Promote
   variables:
