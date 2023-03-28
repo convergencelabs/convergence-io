@@ -24,13 +24,13 @@
 
 - title: Architecture Overview
   icon: /assets/img/features/realtime-data.png
-  link: https://docs.convergence.io/guide/architecture-overview.html
+  link: https://guide.convergence.io/architecture-overview.html
   content: What are some ways you could integrate real-time collaboration into your application with Convergence? We attempt to answer that here.
   button: Explore Architecture
 
 - title: Developer Guide
   icon: /assets/img/learn-icons/guide.png
-  link: https://docs.convergence.io/guide/
+  link: https://guide.convergence.io/
   content:  The developer guide provide a detailed overview of the Convergence platform. It’s a good place to start to get a feel for what the platform can do and how to use it.
   button: View Guide
 
