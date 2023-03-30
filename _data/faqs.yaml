@@ -4,10 +4,7 @@
       a: We believe that highly collaborative real-time applications are the future. There are vanishingly few good examples out there, and we'd like to push the state of the art forward.  It's still much too hard to build these types of apps, and we believe that you shouldn't have to be an expert in distributed concurrency control algorithms to do so.
 
     - q: What does Convergence cost?
-      a: Convergence is free and licensed under the GPL (server) and LGPL (client). With this license arrangement we aim to accommodate the vast majority of commercial and non-commercial uses while maintaining a strong core product. If you have any questions or are interested in a custom license, <a href="/contact-sales/">contact us</a>.
-
-    - q: What's the support story?
-      a: We offer paid support subscriptions to handle any-sized deployment.  <a href="/contact-sales/">Contact us</a> to get in touch with our sales team. For the core open-source product, see our <a href="/support/">support page</a> for the various options.
+      a: Convergence is free and licensed under the GPL (server) and LGPL (client). With this license arrangement we aim to accommodate the vast majority of commercial and non-commercial uses while maintaining a strong core product.
 
     - q: What browsers are supported?
       a: Evergreen browsers (the latest Chrome, Firefox, Safari and Edge) are all supported.  Internet Explorer 10+ should also work but have not been heavily tested.
@@ -17,19 +14,8 @@
     - q: What languages are supported?
       a: We support <strong>JavaScript</strong> and <strong>TypeScript</strong> along with any other interoperable languages. In the near term we also anticipate a Java / Scala client as well.
 
-    - q: Is the API stable?
-      a: We anticipate releasing version 1.0 in late 2019, after we which we will follow standard semantic versioning techniques. <a href="https://www.getdrip.com/forms/62786386/submissions/new">Go here</a> to be notified when we do releases.
-
     - q: How do I request a feature?
       a: Absolutely! The best option is to create a new post on the <a href="https://forum.convergence.io">Convergence community forum</a>.
 
     - q: Do you provide a hosted version?
       a: As of early 2019 we no longer offer a cloud-based production instance of Convergence.  We can help you get Convergence set up in your own environment. 
-
-- title: Convergence Labs
-  questions:
-    - q: Who is Convergence Labs?
-      a: Convergence Labs is the <a href="https://convergencelabs.com/blog/">thought leader</a> in real-time collaborative software.  Besides offering the Convergence Collaboration Engine, we offer custom development services.  <a href="https://convergencelabs.com/contact/">Get in touch</a> if you need help building your own real-time collaborative app.
-
-    - q: Do you always use Convergence when building an app?
-      a: We think Convergence is a great choice for many applications, but sometimes our customers already have a particular tech stack in mind. Our core competency at Convergence Labs is industry-leading domain knowledge and expertise in building collaborative applications, so we simplify identify the right tool for the job, design the appropriate systems and go off and build them.

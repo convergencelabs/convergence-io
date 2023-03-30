@@ -10,17 +10,17 @@
   content: Like the quickstart, but with in-line code explanations the whole way through.
   button: View Tutorial
 
-- title: Examples
-  icon: /assets/img/learn-icons/examples.png
-  link: https://examples.convergence.io
-  content: A large collection of real-time collaboration examples, from rich text to HTML forms to code editors and more.
-  button: View Examples
+# - title: Examples
+#   icon: /assets/img/learn-icons/examples.png
+#   link: https://examples.convergence.io
+#   content: A large collection of real-time collaboration examples, from rich text to HTML forms to code editors and more.
+#   button: View Examples
 
-- title: Demos
-  icon: /assets/img/features/realtime-admin.png
-  link: /demos/
-  content: We put together a few larger applications that include all the functionality of Convergence in one place. 
-  button: View Demos
+# - title: Demos
+#   icon: /assets/img/features/realtime-admin.png
+#   link: /demos/
+#   content: We put together a few larger applications that include all the functionality of Convergence in one place. 
+#   button: View Demos
 
 - title: Architecture Overview
   icon: /assets/img/features/realtime-data.png
@@ -36,7 +36,7 @@
 
 - title: API Documentation
   icon: /assets/img/learn-icons/api.png
-  link: https://docs.convergence.io/js-api/
+  link: https://api-docs.convergence.io/
   content:  Read through the JavaScript API documentation to get detailed information on the available methods in the Convergence Client.
   button: View API
 
